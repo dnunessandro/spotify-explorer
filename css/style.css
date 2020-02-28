@@ -1,0 +1,74 @@
+#content{
+    width: 1150;
+    height: 650px;
+    margin: auto
+}
+
+#chart{
+    width: 850px;
+    height: 600px;
+    background-color: #f7f7f7;
+    margin: 25px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+}
+
+#side-panel{
+    width: 150px;
+    height: 600px;
+    margin: 25px 10px;
+    background-color: #F2F2F2;
+    float: left;
+}
+
+#button-selector{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selected-metric-button{
+    background-color: #1C618C;
+    color: white;
+    margin: 10px auto 10px;
+    display:block;
+}
+
+.metric-button{
+    width: 90%;
+    height: 40px;
+    color: '#403F3E';
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    outline: none;
+}
+
+.metric-button:hover{
+    border-color:  #595857;
+}
+
+#footer{
+    clear:both
+}
+
+.album-node-shape{
+    width: 120px;
+    height: 120px;
+    rx: 15;
+}
+
+.album-node-shape:hover{
+    stroke-width: 2px;
+    stroke: #595857;
+}
+
+.album-node-label{
+    font-size: 14px;
+    text-align: center;
+    text-anchor: middle;
+    pointer-events: none;
+    color: '#403F3E';
+    font-weight: bold;
+}

@@ -1,0 +1,101 @@
+[
+    {
+        "id": "4VNWVzVj6QnNwasZBjPGdu",
+        "name": "Futile Devices",
+        "duration_ms": 133266,
+        "popularity": 54,
+        "track_number": 1,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "57Uq5VUraIFYrZnB25BRql",
+        "name": "Too Much",
+        "duration_ms": 405653,
+        "popularity": 40,
+        "track_number": 2,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "2M1U0BcPddJPfdXpVASFWN",
+        "name": "Age of Adz",
+        "duration_ms": 481720,
+        "popularity": 36,
+        "track_number": 3,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "6Apv6fZ3Tm7DxTCGXw7IUa",
+        "name": "I Walked",
+        "duration_ms": 302826,
+        "popularity": 36,
+        "track_number": 4,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "7aRmHungwLnlHDgchlLEKE",
+        "name": "Now That I'm Older",
+        "duration_ms": 297573,
+        "popularity": 39,
+        "track_number": 5,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "4cKwbogBtaRyOVses4IMvy",
+        "name": "Get Real Get Right",
+        "duration_ms": 312173,
+        "popularity": 32,
+        "track_number": 6,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "1wEBj1UwN5KqWpUBW1HEYY",
+        "name": "Bad Communication",
+        "duration_ms": 146306,
+        "popularity": 31,
+        "track_number": 7,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "0CbTZTXrJ5FOWEADxEh8Qk",
+        "name": "Vesuvius",
+        "duration_ms": 328013,
+        "popularity": 43,
+        "track_number": 8,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "09ZmxJH8zykIMTsEhjT3yw",
+        "name": "All for Myself",
+        "duration_ms": 177013,
+        "popularity": 40,
+        "track_number": 9,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "3d9MDVq4YUEMqURMCoJUyy",
+        "name": "I Want To Be Well",
+        "duration_ms": 388800,
+        "popularity": 37,
+        "track_number": 10,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    },
+    {
+        "id": "5CLs0uFRmU0U9VcnsI6jwv",
+        "name": "Impossible Soul",
+        "duration_ms": 1534720,
+        "popularity": 41,
+        "track_number": 11,
+        "album": "The Age of Adz",
+        "album_release_date": "2010-10-12"
+    }
+]
