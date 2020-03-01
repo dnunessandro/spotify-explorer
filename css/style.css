@@ -1,28 +1,39 @@
 #content{
-    width: 1150;
+    /*
+    width: 1250;
     height: 650px;
-    margin: auto
+    */
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    
 }
 
 #chart{
-    width: 850px;
+    /*
+    width: 950px;
     height: 600px;
+    */
+    width: 87vw;
+    height: 100vh;
     background-color: #f7f7f7;
-    margin: 25px 10px;
+    margin: 0px 10px;
     font-family: Arial, Helvetica, sans-serif;
     float: left;
 }
 
+/* Side-Panel */
 #side-panel{
-    width: 150px;
-    height: 600px;
-    margin: 25px 10px;
+    width: 10vw;
+    height: 100vh;
+    margin-right: 10px;
     background-color: #F2F2F2;
     float: left;
+    position: relative;
 }
 
 #button-selector{
-    height: 500px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,27 +49,41 @@
 
 .metric-button{
     width: 90%;
-    height: 40px;
+    height: 35px;
     color: '#403F3E';
     background-color: #f7f7f7;
     border-radius: 8px;
     outline: none;
+    border-color: #BFBFBF
 }
 
 .metric-button:hover{
-    border-color:  #595857;
+    border-color:  #595857 !important;
 }
 
-#footer{
-    clear:both
+#tooltip {
+    height: 250px;
+    width: 9vw;
+    position: absolute;
+    text-align: center;								
+    padding: 0.5vw;				
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #6FA0BF;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;
+    bottom: 0px; 	
+    opacity: 0;
+    margin: auto 0;
 }
 
-.album-node-shape{
-    width: 120px;
-    height: 120px;
-    rx: 15;
+em{
+    background-color: #F2AF5C
 }
 
+
+/* Album Nodes */
 .album-node-shape:hover{
     stroke-width: 2px;
     stroke: #595857;
@@ -72,3 +97,26 @@
     color: '#403F3E';
     font-weight: bold;
 }
+
+/* Track Nodes */
+.track-node-shape{
+    stroke: #595857;
+}
+.track-node-shape:hover{
+    stroke-width: 1px;
+    stroke: #595857;
+}
+
+.track-node-label{
+    font-size: 8px;
+    text-align: center;
+    text-anchor: middle;
+    pointer-events: none;
+    color: '#403F3E';
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    max-width: 2px;
+}
+

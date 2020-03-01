@@ -9,7 +9,13 @@ function processData(data){
     tracks = splitData['tracks']
     audioFeatures = splitData['audioFeatures']
 
+    // Compute Albums Average Metrics
+    albums.forEach((album, index) => computeAlbumMetricAverage(album, audioFeatures[index], metricsList))
+  
+    albums.forEach(e=>e['avgDuration'] = formatTime(parseTime(parseInt(e['avgDuration_ms']/1000))))
     tracks = combineAudioFeaturesTracksInfo(audioFeatures, tracks)
+
+    tracks.forEach(e=>e['duration'] = formatTime(parseTime(parseInt(e['duration_ms']/1000))))
 
     return {'albums': albums, 'tracks': tracks}
 }
@@ -24,7 +30,7 @@ function splitAlbumsTracksAudioFeatures(data){
 
     for(let i=0; i<dataLen/3; i++){
         albums[i] = data[i][0]
-        tracks[i] = data[i+dataLen/3][0]
+        tracks[i] = data[i+dataLen/3]
         audioFeatures[i] = data[i+dataLen*2/3]
     }
 
@@ -33,9 +39,22 @@ function splitAlbumsTracksAudioFeatures(data){
 
 function combineAudioFeaturesTracksInfo(audioFeatures, tracks){
 
-    audioFeatures.forEach((v,i)=>audioFeatures[i].name = tracks[i].name)
+    let mergedTracks = []
 
-    return audioFeatures
+    for(let i=0; i < audioFeatures.length; i++){
+
+        let audioFeaturesFromAlbum = audioFeatures[i]
+        let tracksFromAlbum = tracks[i]
+
+        audioFeaturesFromAlbum.forEach(function(_,j){
+            audioFeaturesFromAlbum[j].name = tracksFromAlbum[j].name
+            audioFeaturesFromAlbum[j].album = tracksFromAlbum[j].album
+            audioFeaturesFromAlbum[j].album_id = tracksFromAlbum[j].album_id
+        })
+        audioFeaturesFromAlbum.forEach(v=>mergedTracks.push(v))
+    }
+
+    return mergedTracks
 }
 
 function computeMetricAverage(tracks, metric){
@@ -51,71 +70,41 @@ function computeAlbumMetricAverage(album, tracks, metricsList){
     metricsList.forEach(metric => album['avg' + metric.charAt(0).toUpperCase() + metric.slice(1)] = computeMetricAverage(tracks, metric))
 }
 
-function createMetricScales(metricsList, albums, metricsRange){
+function createMetricScales(metricsList, displayMetricsList, albums, metricsRange){
 
     let scales = {}
 
     for(let i=0; i < metricsList.length; i++){
 
         let metric = metricsList[i]
+        let displayMetric = displayMetricsList[i]
         let metricStr = 'avg' + metric.charAt(0).toUpperCase() + metric.slice(1)
 
         let metricArray = albums.map(d=>d[metricStr])
 
         let metricScale = d3.scaleSqrt()
+            .clamp(true)
             .domain(d3.extent(metricArray))
             .range(metricsRange)
 
-        scales[metric] = metricScale
 
+        scales[displayMetric] = metricScale
     }
 
     return scales
 
 }
 
-function dragged(d) {
-    d.x = d3.event.x, d.y = d3.event.y;
-    d3.select(this).attr("x", d.x).attr("y", d.y);
+function createMetricsButtons(displayMetricsList){
 
-    const nodeShapeWidth = $(this).css('width')
-    const nodeShapeHeight = $(this).css('height')
-    $(this).siblings().attr("x", d.x + parseInt(nodeShapeWidth)/2)
-        .attr("y", d.y + parseInt(nodeShapeHeight)/2);
-  }
-
-  function createMetricsButtons(metricsList){
-
-    for(let i=0; metricsList.length; i++){
-        let metric = metricsList[i]
-        $('#button-selector').append('<button id="'
-        + metric
-        + '-button"'
-        + 'class="metric-button">'
-        + metric.charAt(0).toUpperCase() 
-        + metric.slice(1) 
-        + '</button>')
-
+for(let i=0; i < displayMetricsList.length; i++){
+    let metric = displayMetricsList[i]
+    $('#button-selector').append('<button id="'
+    + metric
+    + '-button"'
+    + 'class="metric-button">'
+    + metric.charAt(0).toUpperCase() 
+    + metric.slice(1) 
+    + '</button>')
     }
-
-  }
-
-  function createMetricsButtonsClickAnimation(metricsList, metricsScales, nodeShapes){
-
-    for(let i=0; i < metricsList.length; i++){
-        let metric = metricsList[i]
-        let metricStr = 'avg' + metric.charAt(0).toUpperCase() + metric.slice(1)
-        d3.select('#' + metric + '-button').on('click', function(){
-
-            $('#selected-metric-button').text(metric.charAt(0).toUpperCase() + metric.slice(1))
-
-            nodeShapes
-            .transition()
-            .style('width', d=>metricsScales[metric](d[metricStr])+ 'px')
-            .style('height',d=>metricsScales[metric](d[metricStr]) + 'px')
-            
-        })
-
-    }
-
-  }
+}
