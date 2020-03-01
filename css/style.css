@@ -33,7 +33,7 @@
 }
 
 #button-selector{
-    height: 450px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +49,7 @@
 
 .metric-button{
     width: 90%;
-    height: 35px;
+    height: 30px;
     color: '#403F3E';
     background-color: #f7f7f7;
     border-radius: 8px;
@@ -62,7 +62,7 @@
 }
 
 #tooltip {
-    height: 250px;
+    height: 220px;
     width: 9vw;
     position: absolute;
     text-align: center;								
