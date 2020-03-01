@@ -127,7 +127,7 @@ em{
     .metric-button{
         height: 8%;
     }
-    .selected-metric-button{
+    #selected-metric-button{
         height: 25px;
     }
 
