@@ -120,7 +120,7 @@ em{
     max-width: 2px;
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 600px) {
     #button-selector{
         height: 50%;
     }
