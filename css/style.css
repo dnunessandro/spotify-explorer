@@ -33,7 +33,7 @@
 }
 
 #button-selector{
-    height: 350px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +49,7 @@
 
 .metric-button{
     width: 90%;
-    height: 30px;
+    height: 40px;
     color: '#403F3E';
     background-color: #f7f7f7;
     border-radius: 8px;
@@ -120,3 +120,15 @@ em{
     max-width: 2px;
 }
 
+@media only screen and (max-height: 800px) {
+    #button-selector{
+        height: 50%;
+    }
+    .metric-button{
+        height: 8%;
+    }
+    .selected-metric-button{
+        height: 25px;
+    }
+
+  }
