@@ -1,0 +1,23 @@
+[
+    {
+        "id": "5U7GN7wM8nZKYeeOoYhPjC",
+        "name": "The Age of Adz",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e02c941599f5b74a9c1aad3cd0c",
+        "popularity": 55,
+        "release_date": "2010-10-12",
+        "total_tracks": 11,
+        "tracks": [
+            "Futile Devices",
+            "Too Much",
+            "Age of Adz",
+            "I Walked",
+            "Now That I'm Older",
+            "Get Real Get Right",
+            "Bad Communication",
+            "Vesuvius",
+            "All for Myself",
+            "I Want To Be Well",
+            "Impossible Soul"
+        ]
+    }
+]

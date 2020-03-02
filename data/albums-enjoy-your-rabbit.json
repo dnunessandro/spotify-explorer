@@ -1,0 +1,26 @@
+[
+    {
+        "id": "69OklUVsiAYKeFiY93Qe8m",
+        "name": "Enjoy Your Rabbit",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e02def42bd2f606a06c35b47fec",
+        "popularity": 25,
+        "release_date": "2004-06-08",
+        "total_tracks": 14,
+        "tracks": [
+            "Year of the Asthmatic Cat",
+            "Year of the Monkey",
+            "Year of the Rat",
+            "Year of the Ox",
+            "Year of the Boar",
+            "Year of the Tiger",
+            "Year of the Snake",
+            "Year of the Sheep",
+            "Year of the Rooster",
+            "Year of the Dragon",
+            "Enjoy Your Rabbit",
+            "Year of the Dog",
+            "Year of the Horse",
+            "Year of Our Lord"
+        ]
+    }
+]

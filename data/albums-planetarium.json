@@ -1,0 +1,29 @@
+[
+    {
+        "id": "0msgMFYRkWX6HixjvGOQHJ",
+        "name": "Planetarium",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e027b2fcdc081af87e216367561",
+        "popularity": 52,
+        "release_date": "2017-06-09",
+        "total_tracks": 17,
+        "tracks": [
+            "Neptune",
+            "Jupiter",
+            "Halley's Comet",
+            "Venus",
+            "Uranus",
+            "Mars",
+            "Black Energy",
+            "Sun",
+            "Tides",
+            "Moon",
+            "Pluto",
+            "Kuiper Belt",
+            "Black Hole",
+            "Saturn",
+            "In The Beginning",
+            "Earth",
+            "Mercury"
+        ]
+    }
+]
