@@ -70,9 +70,11 @@ function computeAlbumMetricAverage(album, tracks, metricsList){
     metricsList.forEach(metric => album['avg' + metric.charAt(0).toUpperCase() + metric.slice(1)] = computeMetricAverage(tracks, metric))
 }
 
-function createMetricScales(metricsList, displayMetricsList, albums, metricsRange){
+function createMetricScales(metricsDomains, displayMetricsList, metricsRange){
 
     let scales = {}
+
+    const metricsList = Object.keys(metricsDomains)
 
     for(let i=0; i < metricsList.length; i++){
 
@@ -80,11 +82,9 @@ function createMetricScales(metricsList, displayMetricsList, albums, metricsRang
         let displayMetric = displayMetricsList[i]
         let metricStr = 'avg' + metric.charAt(0).toUpperCase() + metric.slice(1)
 
-        let metricArray = albums.map(d=>d[metricStr])
-
         let metricScale = d3.scaleSqrt()
             .clamp(true)
-            .domain(d3.extent(metricArray))
+            .domain(d3.extent(metricsDomains[metricsList[i]]))
             .range(metricsRange)
 
 
@@ -107,4 +107,30 @@ for(let i=0; i < displayMetricsList.length; i++){
     + metric.slice(1) 
     + '</button>')
     }
+}
+
+function createAlbumNodesScale(nAlbums, albumNodesFoci, chartDim){
+    let albumNodesScale = {}
+
+    for(let i=0; i < nAlbums; i++){
+        albumNodesScale[i] = parseInt( albumNodesFoci[nAlbums][i] * chartDim )
+    }
+    return albumNodesScale
+}
+
+function breakLineAlbumName(albumName,albumNodesFociX, i){
+
+    const index = albumName.indexOf(' ', albumName.indexOf( ' ', albumName.indexOf( ' ' ) + 1 ) + 1);
+    const firstChunk = index >= 0 ? albumName.substr( 0, index ) : albumName.substr( index + 1 );
+    if ( index >= 0 ){
+        const secondChunk = albumName.substr( index + 1 );
+        const outputHtml = '<tspan x="'+ albumNodesFociX[i] + '" text-anchor="middle">' + firstChunk + '</tspan>' +  '<tspan x="' + albumNodesFociX[i] +'" text-anchor="middle" dy="1.2em">' + secondChunk + '</tspan>'
+        console.log(outputHtml)
+        return outputHtml
+    }
+    else{
+        return firstChunk
+    }
+
+    
 }

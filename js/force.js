@@ -24,14 +24,15 @@ function createAlbumNodesFoci(albumNodesFociX, albumNodesFociY){
     return albumNodesFoci
 }
 
-function createAlbumNodesForce(albums, chartHeight, chartYPadding, nodesXScale){
+function createAlbumNodesForce(albums, nodesXScale, nodesYScale){
 
     const forceAlbums = d3.forceSimulation(albums)
         .alphaDecay(0)
         .force('forceX', d3.forceX()
-            .x((d,i)=>nodesXScale(i))
+            .x((d,i)=>nodesXScale[i])
             .strength(0.1))
-        .force('forceY', d3.forceY(chartHeight/2-chartYPadding)
+        .force('forceY', d3.forceY()
+            .y((d,i)=>nodesYScale[i])
             .strength(0.1))
 
     return forceAlbums
@@ -48,17 +49,18 @@ function createTrackNodesForce(tracks){
 }
 
 function albumNodesTickUpdate(albumNodeShapes, albumNodeLabels){
-    albumNodeShapes.attr('x', d=>d.x)
-    albumNodeShapes.attr('y', d=>d.y)
+    albumNodeShapes.attr('x', (d,i)=>d.x-$('.album-node-shape').eq(i).attr('width')/2)
+    albumNodeShapes.attr('y', (d,i)=>d.y-$('.album-node-shape').eq(i).attr('height')/2)
 
-    albumNodeLabels.attr('x', function(d,i){
-        const albumNodeShapeWidth = $('.album-node-shape').eq(i).css('width')
-        return d.x + parseFloat(albumNodeShapeWidth)/2
+    albumNodeLabels.attr('x', function(d, i){
+
+        $('.album-node-label').eq(i).children().attr('x', e=>d.x)
+
+        return d.x
+
     })
-    albumNodeLabels.attr('y', function(d,i){
-        const albumNodeShapeHeight = $('.album-node-shape').eq(i).css('height')
-        return d.y + parseFloat(albumNodeShapeHeight)/2
-    })
+    albumNodeLabels.attr('y', d=>d.y)
+
     
 }
 

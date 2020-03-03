@@ -1,4 +1,4 @@
-function createMetricsButtonsClickAnimation(displayMetricsList, metricsScales, albumNodeShapes, forceAlbums, nodesXScale){
+function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes){
     for(let i=0; i < displayMetricsList.length; i++){
         let metric = metricsList[i]
         let displayMetric = displayMetricsList[i]
@@ -8,22 +8,17 @@ function createMetricsButtonsClickAnimation(displayMetricsList, metricsScales, a
             $('#button-selector').children().css('border-color', '#BFBFBF')
             $(this).css('border-color', '#1C618C')
 
-            $('#selected-metric-button').text(metric.charAt(0).toUpperCase() + metric.slice(1))
+            $('#selected-metric-button').text(displayMetric.charAt(0).toUpperCase() + displayMetric.slice(1))
 
             albumNodeShapes
-            .transition()
-            .attr('width', d=>metricsScales[displayMetric](d[metricStr]))
-            .attr('height',d=>metricsScales[displayMetric](d[metricStr]))
-
-            forceAlbums.force('forceX')
-                .x((d,i)=>nodesXScale(i)+albumNodesWidth/2-metricsScales[displayMetric](d[metricStr])/2)
-            forceAlbums.force('forceY')
-                .y((d,i)=>chartHeight/2-chartYPadding+albumNodesHeight/2-metricsScales[displayMetric](d[metricStr])/2)
+                .transition()
+                .attr('width', d=>albumMetricsScales[displayMetric](d[metricStr]))
+                .attr('height',d=>albumMetricsScales[displayMetric](d[metricStr]))
 
             d3.selectAll('.track-node-shape')
-            .transition()
-            .attr('r', d=>metricsScales[displayMetric](Math.abs(d[metric]))/metricsScaleFactor)
-            
+                .transition()
+                .attr('r', d=>trackMetricsScales[displayMetric](d[metric]))
+                
         })
 
     }
@@ -149,7 +144,7 @@ function createTrackNodesClickAnimation(trackNodes, trackNodeShapes, trackNodeLa
         .style('opacity', 100)
     
 }
-
+ 
 function createToolTip(d) {
 
     const selectedMetric = $('#selected-metric-button').text().toLowerCase()
@@ -174,4 +169,20 @@ function roundIfNumber(e){
     }else{
         return e
     }
+}
+
+// Animate Track Nodes Tooltip
+function showMetricTooltip(i){
+
+    let tooltip = d3.select('#tooltip')
+    tooltip
+        .transition()		
+        .duration(200)
+        .style("opacity", .9)
+
+    const metric = $('#button-selector').children().eq(i).text()
+    console.log(metric)
+    
+    tooltip.html(d=>'<strong>' + metric + '</strong><br><br>' + metricsExplanations[metric.toLowerCase()])
+
 }

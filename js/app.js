@@ -1,16 +1,28 @@
 Promise.all([
-    d3.json('data/album-michigan.json'),
-    d3.json('data/album-illinois.json'),
-    d3.json('data/album-carrie-and-lowell.json'),
-    d3.json('data/album-age-of-adz.json'),
+    d3.json('data/albums-a-sun-came.json'),
+    d3.json('data/albums-enjoy-your-rabbit.json'),
+    d3.json('data/albums-michigan.json'),
+    d3.json('data/albums-seven-swans.json'),
+    d3.json('data/albums-illinois.json'),
+    d3.json('data/albums-carrie-and-lowell.json'),
+    d3.json('data/albums-age-of-adz.json'),
+    d3.json('data/albums-planetarium.json'),
+    d3.json('data/tracks-a-sun-came.json'),
+    d3.json('data/tracks-enjoy-your-rabbit.json'),
     d3.json('data/tracks-michigan.json'),
+    d3.json('data/tracks-seven-swans.json'),
     d3.json('data/tracks-illinois.json'),
     d3.json('data/tracks-carrie-and-lowell.json'),
     d3.json('data/tracks-age-of-adz.json'),
+    d3.json('data/tracks-planetarium.json'),
+    d3.json('data/audio-features-a-sun-came.json'),
+    d3.json('data/audio-features-enjoy-your-rabbit.json'),
     d3.json('data/audio-features-michigan.json'),
+    d3.json('data/audio-features-seven-swans.json'),
     d3.json('data/audio-features-illinois.json'),
     d3.json('data/audio-features-carrie-and-lowell.json'),
-    d3.json('data/audio-features-age-of-adz.json')
+    d3.json('data/audio-features-age-of-adz.json'),
+    d3.json('data/audio-features-planetarium.json'),
 
 ]).then(function(data){
 
@@ -21,11 +33,12 @@ Promise.all([
     const albumIds = albums.map(d=>d.id)
 
     // Create Scales
-    const nodesXScale = d3.scaleLinear()
-        .domain([0,albums.length])
-        .range([chartXPadding,chartWidth])
+    const nodesXScale = createAlbumNodesScale(albums.length, albumNodesXFoci, chartWidth)
+    const nodesYScale = createAlbumNodesScale(albums.length, albumNodesYFoci, chartHeight)
 
-    const metricsScales = createMetricScales(metricsList, displayMetricsList, albums, metricsRange)
+    const albumMetricsScales = createMetricScales(metricsDomains, displayMetricsList, albumMetricsRange)
+    const trackMetricsScales = createMetricScales(metricsDomains, displayMetricsList, trackMetricsRange)
+
 
     const nodeColorScale = d3.scaleOrdinal()
         .domain(albums.map(e=>e.id))
@@ -36,11 +49,11 @@ Promise.all([
         .range(d3.range(albums.length))
 
     // Create Albums Force Layout
-    const forceAlbums = createAlbumNodesForce(albums, chartHeight, chartYPadding, nodesXScale)
+    const forceAlbums = createAlbumNodesForce(albums, nodesXScale, nodesYScale)
 
     // Get Album Nodes Foci
-    const albumNodesFociX = d3.range(albums.length).map(e=>nodesXScale(e)+albumNodesWidth/2)
-    const albumNodesFociY = d3.range(albums.length).map(e=>chartHeight/2-chartYPadding+albumNodesHeight/2)
+    const albumNodesFociX = d3.range(albums.length).map(e=>nodesXScale[e])
+    const albumNodesFociY = d3.range(albums.length).map(e=>nodesYScale[e])
     const albumNodesFoci = createAlbumNodesFoci(albumNodesFociX, albumNodesFociY)
 
     // Create Tracks Force Layout
@@ -58,12 +71,15 @@ Promise.all([
         .attr('class', 'album-node-shape')
         .attr('width', albumNodesWidth)
         .attr('height', albumNodesHeight)
+        .attr('x', (_,i)=>albumNodesFociX[i])
+        .attr('y', (_,i)=>albumNodesFociY[i])
         .attr('rx', albumNodesRX)
         .style('fill', d=>nodeColorScale(d.id))
 
     const albumNodeLabels = albumNodes.append('text')
         .attr('class', 'album-node-label')
-        .text(d=>d.name)
+        .html((d, i)=>breakLineAlbumName(d.name,albumNodesFociX, i))
+
 
     // Tie Force to Album Nodes
     forceAlbums.on('tick', function(){
@@ -79,7 +95,7 @@ Promise.all([
       });
 
     // Animate Metrics
-    createMetricsButtonsClickAnimation(displayMetricsList, metricsScales, albumNodeShapes, forceAlbums, nodesXScale)
+    createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes)
 
     // Animate Album Nodes
     createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceTracks, albumNodesFoci, albumNodeIndexScale, tooltip)
@@ -104,7 +120,16 @@ Promise.all([
                 .style("opacity", 0);	
         }) 
 
-    console.log(albums)
+
+    // Animate Metrics Buttons
+    console.log(d3.select('#button-selector').selectAll('.metric-button'))
+    d3.select('#button-selector').selectAll('.metric-button')
+        .on('mouseover', (d,i)=>showMetricTooltip(i))
+        .on('mouseout', function(d) {		
+            tooltip.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        })
     
 })
 
