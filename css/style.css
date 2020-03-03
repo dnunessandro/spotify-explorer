@@ -98,6 +98,15 @@ em{
     font-weight: bold;
 }
 
+.album-node-cover{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.album-node-cover:hover{
+    opacity: 1
+}
+
 /* Track Nodes */
 .track-node-shape{
     stroke: #595857;

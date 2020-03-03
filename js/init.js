@@ -79,8 +79,10 @@ const metricsExplanations = {
     'duration' : 'Duration of the track.'
 }
 
+const sortAlbumsByReleaseDateFlag = false
+
 const albumMetricsRange = [120, 230]
-const trackMetricsRange = [16, 30]
+const trackMetricsRange = [17, 35]
 const metricsScaleFactor = 6;
 const trackLabelMaxCharLen = 6;
 

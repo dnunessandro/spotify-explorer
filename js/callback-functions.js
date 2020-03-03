@@ -1,4 +1,4 @@
-function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes){
+function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes, albumNodeCovers, albumNodeClipPaths){
     for(let i=0; i < displayMetricsList.length; i++){
         let metric = metricsList[i]
         let displayMetric = displayMetricsList[i]
@@ -11,6 +11,16 @@ function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScal
             $('#selected-metric-button').text(displayMetric.charAt(0).toUpperCase() + displayMetric.slice(1))
 
             albumNodeShapes
+                .transition()
+                .attr('width', d=>albumMetricsScales[displayMetric](d[metricStr]))
+                .attr('height',d=>albumMetricsScales[displayMetric](d[metricStr]))
+
+            albumNodeCovers
+                .transition()
+                .attr('width', d=>albumMetricsScales[displayMetric](d[metricStr]))
+                .attr('height',d=>albumMetricsScales[displayMetric](d[metricStr]))
+
+            albumNodeClipPaths
                 .transition()
                 .attr('width', d=>albumMetricsScales[displayMetric](d[metricStr]))
                 .attr('height',d=>albumMetricsScales[displayMetric](d[metricStr]))
@@ -51,26 +61,20 @@ function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceT
         
             const trackNodeShapes = trackNodes.append('circle')
                 .attr('class', 'track-node-shape')
-                .attr('cx', albumNodesFoci[albumNodeIndexScale(albumId)].x)
-                .attr('cy', albumNodesFoci[albumNodeIndexScale(albumId)].y)
+                /*.attr('cx', albumNodesFoci[albumNodeIndexScale(albumId)].x)*/
                 .attr('r', trackNodesR)
                 .style('fill', d=>nodeColorScale(d.album_id))
         
             const trackNodeLabels = trackNodes.append('text')
                 .attr('class', 'track-node-label')
-                .attr('x', albumNodesFoci[albumNodeIndexScale(albumIds[i])].x)
-                .attr('y', albumNodesFoci[albumNodeIndexScale(albumIds[i])].y)
-                .text(d=>d.name.substring(0,trackLabelMaxCharLen))
+                .html(d=>breakLineTrackName(d.name))
 
-            const trackNodeShapesAll = svg.selectAll('.track-node-shape')
-            const trackNodeLabelsAll = svg.selectAll('.track-node-label')
-            
             // Tie Force to Tracks Nodes
+            const trackNodesAll = svg.selectAll('.track-node')
             forceTracks.on("tick", function(){
-                trackNodesTickUpdate(tracks, trackNodeShapesAll, trackNodeLabelsAll, albumNodesFoci, albumNodeIndexScale)
+                trackNodesTickUpdate(tracks, trackNodesAll, albumNodesFoci, albumNodeIndexScale)
             });
-            trackNodeShapes.call(d3.drag().on("drag", dragTrack));
-            trackNodeLabels.call(d3.drag().on("drag", dragTrack));
+            trackNodes.call(d3.drag().on("drag", dragTrack));
 
             trackNodes.on('click', function(){
                 createTrackNodesClickAnimation(trackNodes, trackNodeShapes, trackNodeLabels, albumId)
@@ -89,6 +93,7 @@ function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceT
                     .style("opacity", .9)
                     
                 tooltip.html(title + tooltipHtml)
+
             })			
             .on("mouseout", function(d) {		
                 tooltip.transition()		
@@ -181,7 +186,6 @@ function showMetricTooltip(i){
         .style("opacity", .9)
 
     const metric = $('#button-selector').children().eq(i).text()
-    console.log(metric)
     
     tooltip.html(d=>'<strong>' + metric + '</strong><br><br>' + metricsExplanations[metric.toLowerCase()])
 

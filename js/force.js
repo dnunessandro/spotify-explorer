@@ -1,21 +1,39 @@
 function dragAlbum(d) {
     d.x = d3.event.x 
     d.y = d3.event.y
-    d3.select(this).attr("x", d.x).attr("y", d.y);
-
-    const nodeShapeWidth = $(this).css('width')
-    const nodeShapeHeight = $(this).css('height')
-    $(this).siblings().attr("x", d.x + parseInt(nodeShapeWidth)/2)
-        .attr("y", d.y + parseInt(nodeShapeHeight)/2);
+    /*
+    d3.select(this).attr("transform", function(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+      })*/
 }
 
-function dragTrack(d) {
+function dragstarted(d, forceAlbums) {
+    if (!d3.event.active) forceAlbums.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  
+  function dragged(d, forceAlbums) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+    $('.album-node')
+        .css('pointer-events', 'none')
+  }
+  
+  function dragended(d, forceAlbums) {
+    if (!d3.event.active) forceAlbums.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+    $('.album-node')
+        .css('pointer-events', 'auto')
+  }
 
+function dragTrack(d){
     d.x = d3.event.x 
     d.y = d3.event.y
-    d3.select(this).attr("cx", d.x).attr("cy", d.y);
-
-    $(this).siblings().attr("x", d.x).attr("y", d.y)
+    d3.select(this).attr("transform", function(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+      })
 }
 
 function createAlbumNodesFoci(albumNodesFociX, albumNodesFociY){
@@ -48,23 +66,21 @@ function createTrackNodesForce(tracks){
 
 }
 
-function albumNodesTickUpdate(albumNodeShapes, albumNodeLabels){
-    albumNodeShapes.attr('x', (d,i)=>d.x-$('.album-node-shape').eq(i).attr('width')/2)
-    albumNodeShapes.attr('y', (d,i)=>d.y-$('.album-node-shape').eq(i).attr('height')/2)
-
-    albumNodeLabels.attr('x', function(d, i){
-
-        $('.album-node-label').eq(i).children().attr('x', e=>d.x)
-
-        return d.x
-
-    })
-    albumNodeLabels.attr('y', d=>d.y)
-
+function albumNodesTickUpdate(albumNodes, albumNodeLabels){
     
+    albumNodes.attr("transform", function(d, i) {
+        return "translate(" + parseInt(d.x - $('.album-node-shape').eq(i).attr('width')/2) + "," 
+        + parseInt(d.y - $('.album-node-shape').eq(i).attr('height')/2) + ")";
+      })
+
+    albumNodeLabels.attr("transform", function(d, i) {
+        return "translate(" + parseInt($('.album-node-shape').eq(i).attr('width')/2) + "," 
+        + parseInt($('.album-node-shape').eq(i).attr('height')/2) + ")";
+      })
+
 }
 
-function trackNodesTickUpdate(tracks, trackNodeShapes, trackNodeLabels, albumNodesFoci, albumNodeIndexScale) {
+function trackNodesTickUpdate(tracks, trackNodes, albumNodesFoci, albumNodeIndexScale){
       
     // Push nodes toward their designated focus.
     tracks.forEach(function(o, i) {
@@ -72,11 +88,8 @@ function trackNodesTickUpdate(tracks, trackNodeShapes, trackNodeLabels, albumNod
       o.x += (albumNodesFoci[albumNodeIndexScale(o.album_id)].x - o.x) * 0.1;
     });
   
-    trackNodeShapes
-        .attr("cx", d=>d.x)
-        .attr("cy", d=>d.y);
-
-    trackNodeLabels
-        .attr("x", d=>d.x)
-        .attr("y", d=>d.y);
+    trackNodes
+        .attr("transform", function(d, i) {
+            return "translate(" + d.x + "," + d.y + ")";
+          })
   }

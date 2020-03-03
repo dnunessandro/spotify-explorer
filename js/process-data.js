@@ -1,13 +1,21 @@
-function processData(data){
+function processData(data, sortAlbumsByReleaseDateFlag){
 
     let albums = []
     let tracks = []
     let audioFeatures = []
 
     splitData = splitAlbumsTracksAudioFeatures(data)
+
     albums = splitData['albums']
     tracks = splitData['tracks']
     audioFeatures = splitData['audioFeatures']
+
+    if (sortAlbumsByReleaseDateFlag){
+        releaseDateIndexes = getReleaseDateIndexes(albums)
+        albums = albums.map((e,i)=>albums[releaseDateIndexes[i]])
+        tracks = tracks.map((e,i)=>tracks[releaseDateIndexes[i]])
+        audioFeatures = audioFeatures.map((e,i)=>audioFeatures[releaseDateIndexes[i]])
+    }
 
     // Compute Albums Average Metrics
     albums.forEach((album, index) => computeAlbumMetricAverage(album, audioFeatures[index], metricsList))
@@ -118,19 +126,53 @@ function createAlbumNodesScale(nAlbums, albumNodesFoci, chartDim){
     return albumNodesScale
 }
 
-function breakLineAlbumName(albumName,albumNodesFociX, i){
+function breakLineAlbumName(albumName){
 
     const index = albumName.indexOf(' ', albumName.indexOf( ' ', albumName.indexOf( ' ' ) + 1 ) + 1);
     const firstChunk = index >= 0 ? albumName.substr( 0, index ) : albumName.substr( index + 1 );
     if ( index >= 0 ){
         const secondChunk = albumName.substr( index + 1 );
-        const outputHtml = '<tspan x="'+ albumNodesFociX[i] + '" text-anchor="middle">' + firstChunk + '</tspan>' +  '<tspan x="' + albumNodesFociX[i] +'" text-anchor="middle" dy="1.2em">' + secondChunk + '</tspan>'
-        console.log(outputHtml)
+        const outputHtml = '<tspan x="0" text-anchor="middle">' + firstChunk + '</tspan>' +  '<tspan x="0" text-anchor="middle" dy="1.2em">' + secondChunk + '</tspan>'
         return outputHtml
     }
     else{
         return firstChunk
     }
 
+}
+
+function breakLineTrackName(trackName){
+
+    
+    const firstChunk = trackName.substr(0,5)
+    const secondChunk = trackName.substr(5,5)
+    let outputHtml = ''
+
+    if (trackName.length < 8 )
+        outputHtml = trackName
+    else{
+        outputHtml = '<tspan x="0" text-anchor="middle">' + firstChunk + '</tspan>' +  '<tspan x="0" text-anchor="middle" dy="1.2em">' + secondChunk + '</tspan>'
+    }
+
+    return outputHtml
+
+}
+
+function getReleaseDateIndexes(albums){
+
+    const parseDate = d3.timeParse("%Y-%m-%d")
+
+    let datesDict = []
+
+    albums.forEach((e,i)=>datesDict.push(
+        {'album' : e.name,
+         'date' : parseDate(e.release_date), 
+         'index' : i}))
+
+    const datesDictSorted = datesDict.sort(function(x,y){
+        return d3.ascending(x.date, y.date);
+    })
+
+    return datesDictSorted.map(e=>e.index)
     
 }

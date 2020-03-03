@@ -4,30 +4,30 @@ Promise.all([
     d3.json('data/albums-michigan.json'),
     d3.json('data/albums-seven-swans.json'),
     d3.json('data/albums-illinois.json'),
-    d3.json('data/albums-carrie-and-lowell.json'),
     d3.json('data/albums-age-of-adz.json'),
+    d3.json('data/albums-carrie-and-lowell.json'),
     d3.json('data/albums-planetarium.json'),
     d3.json('data/tracks-a-sun-came.json'),
     d3.json('data/tracks-enjoy-your-rabbit.json'),
     d3.json('data/tracks-michigan.json'),
     d3.json('data/tracks-seven-swans.json'),
     d3.json('data/tracks-illinois.json'),
-    d3.json('data/tracks-carrie-and-lowell.json'),
     d3.json('data/tracks-age-of-adz.json'),
+    d3.json('data/tracks-carrie-and-lowell.json'),
     d3.json('data/tracks-planetarium.json'),
     d3.json('data/audio-features-a-sun-came.json'),
     d3.json('data/audio-features-enjoy-your-rabbit.json'),
     d3.json('data/audio-features-michigan.json'),
     d3.json('data/audio-features-seven-swans.json'),
     d3.json('data/audio-features-illinois.json'),
-    d3.json('data/audio-features-carrie-and-lowell.json'),
     d3.json('data/audio-features-age-of-adz.json'),
-    d3.json('data/audio-features-planetarium.json'),
-
-]).then(function(data){
+    d3.json('data/audio-features-carrie-and-lowell.json'),
+    d3.json('data/audio-features-planetarium.json')
+    ]
+).then(function(data){
 
     // Get Albuns and Tracks
-    const processedData = processData(data)
+    const processedData = processData(data, sortAlbumsByReleaseDateFlag)
     const albums = processedData['albums']
     const tracks = processedData['tracks']
     const albumIds = albums.map(d=>d.id)
@@ -71,22 +71,39 @@ Promise.all([
         .attr('class', 'album-node-shape')
         .attr('width', albumNodesWidth)
         .attr('height', albumNodesHeight)
-        .attr('x', (_,i)=>albumNodesFociX[i])
-        .attr('y', (_,i)=>albumNodesFociY[i])
         .attr('rx', albumNodesRX)
         .style('fill', d=>nodeColorScale(d.id))
 
     const albumNodeLabels = albumNodes.append('text')
         .attr('class', 'album-node-label')
-        .html((d, i)=>breakLineAlbumName(d.name,albumNodesFociX, i))
+        .html(d=>breakLineAlbumName(d.name))
+
+    const albumNodeClipPaths = albumNodes.append('clipPath')
+        .attr('class', 'album-node-clip-path')
+        .attr('id', (_,i)=>'clip-path-' + i)
+        .append('rect')
+        .attr('width', albumNodesWidth)
+        .attr('height', albumNodesHeight)
+        .attr('rx', albumNodesRX)
+
+    const albumNodeCovers = albumNodes.append('image')
+        .classed('album-node-cover', true)
+        .attr('href', d=>d.cover_image)
+        .attr('width', albumNodesWidth)
+        .attr('height', albumNodesHeight)
+        .attr('clip-path', (_,i)=>'url(#clip-path-'+ i +')')
 
 
     // Tie Force to Album Nodes
     forceAlbums.on('tick', function(){
-        albumNodesTickUpdate(albumNodeShapes, albumNodeLabels)
+        albumNodesTickUpdate(albumNodes, albumNodeLabels)
     })
-    albumNodeShapes.call(d3.drag().on("drag", dragAlbum));
-    albumNodeLabels.call(d3.drag().on("drag", dragAlbum));
+    albumNodes.call(d3.drag()
+        .on("start", d=>dragstarted(d,forceAlbums))
+        .on("drag", d=>dragged(d,forceAlbums))
+        .on("end",  d=>dragended(d,forceAlbums)));
+
+    
     
     // Animate Metrics Selector
     $( "#selected-metric-button" ).click(function() {
@@ -95,12 +112,12 @@ Promise.all([
       });
 
     // Animate Metrics
-    createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes)
+    createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes, albumNodeCovers, albumNodeClipPaths)
 
-    // Animate Album Nodes
+    // Animate Album Nodes: Click
     createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceTracks, albumNodesFoci, albumNodeIndexScale, tooltip)
-    
-    // Animate Album Nodes Tooltip
+
+    // Animate Album Nodes: Hover
     albumNodes
         .on("mouseover", function(d){
             title = '<strong>' + d.name + ' (Avg.)</strong><br><br>'
@@ -109,20 +126,29 @@ Promise.all([
                 let tooltip = d3.select('#tooltip')
                 tooltip
                     .transition()		
-                    .duration(200)
+                    .duration(100)
                     .style("opacity", .9)
-                    
                 tooltip.html(title + tooltipHtml)
+
+                d3.select(this).select('image')
+                    .transition()
+                    .duration(300)	
+                    .style('opacity', 1)
+
         })					
         .on("mouseout", function(d) {		
             tooltip.transition()		
                 .duration(500)		
-                .style("opacity", 0);	
-        }) 
+                .style("opacity", 0);
+
+            d3.select(this).select('image')
+                .transition()
+                .duration(100)
+                .style('opacity', 0)
+        })
 
 
     // Animate Metrics Buttons
-    console.log(d3.select('#button-selector').selectAll('.metric-button'))
     d3.select('#button-selector').selectAll('.metric-button')
         .on('mouseover', (d,i)=>showMetricTooltip(i))
         .on('mouseout', function(d) {		
