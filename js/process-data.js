@@ -1,3 +1,11 @@
+function readData(artist, artistsDiscography){
+    let data = []
+    artistsDiscography[artist].forEach(e=>data.push(d3.json('data/' + artist +'/albums-' + e + '.json')))
+    artistsDiscography[artist].forEach(e=>data.push(d3.json('data/' + artist +'/tracks-' + e + '.json')))
+    artistsDiscography[artist].forEach(e=>data.push(d3.json('data/' + artist +'/audio-features-' + e + '.json')))
+    return data
+}
+
 function processData(data, sortAlbumsByReleaseDateFlag){
 
     let albums = []
@@ -18,13 +26,16 @@ function processData(data, sortAlbumsByReleaseDateFlag){
     }
 
     // Compute Albums Average Metrics
+    const mergedTracksDict = combineAudioFeaturesTracksInfo(audioFeatures, tracks)
+
+    audioFeatures = mergedTracksDict['audioFeatures']
+    tracks = mergedTracksDict['mergedTracks']
+
     albums.forEach((album, index) => computeAlbumMetricAverage(album, audioFeatures[index], metricsList))
   
     albums.forEach(e=>e['avgDuration'] = formatTime(parseTime(parseInt(e['avgDuration_ms']/1000))))
-    tracks = combineAudioFeaturesTracksInfo(audioFeatures, tracks)
 
     tracks.forEach(e=>e['duration'] = formatTime(parseTime(parseInt(e['duration_ms']/1000))))
-
     return {'albums': albums, 'tracks': tracks}
 }
 
@@ -58,11 +69,13 @@ function combineAudioFeaturesTracksInfo(audioFeatures, tracks){
             audioFeaturesFromAlbum[j].name = tracksFromAlbum[j].name
             audioFeaturesFromAlbum[j].album = tracksFromAlbum[j].album
             audioFeaturesFromAlbum[j].album_id = tracksFromAlbum[j].album_id
+            audioFeaturesFromAlbum[j].popularity = tracksFromAlbum[j].popularity
+            audioFeatures[i].popularity = tracksFromAlbum[j].popularity
         })
         audioFeaturesFromAlbum.forEach(v=>mergedTracks.push(v))
     }
 
-    return mergedTracks
+    return {'audioFeatures' : audioFeatures, 'mergedTracks': mergedTracks}
 }
 
 function computeMetricAverage(tracks, metric){
@@ -117,6 +130,40 @@ for(let i=0; i < displayMetricsList.length; i++){
     }
 }
 
+function createArtistsButtons(artistsDiscography){
+
+    const artists = Object.keys(artistsDiscography).sort()
+    const splash = $('#splash')
+
+    Promise.all(readArtistsData(artists)).then(function(artistsData){
+
+        artists.forEach(function(artist, i){
+            splash.append('<div id= "'+ artist +'-button"></div>')
+
+            $('#' + artist + '-button')
+                .attr('class', 'artist-button')
+
+            $('#' + artist + '-button')
+                .append('<a class="artist-name">' + artistsData[i][0].name + '</a>')
+            
+
+            $('#' + artist + '-button')
+                .append('<img id="'+ artist +'-image">')
+
+            $('#' + artist + '-image')
+                .attr('class', 'artist-image')
+                .attr('src', artistsData[i][0].image)
+        })
+        
+    })
+}
+
+function readArtistsData(artists){
+    artistsData = [] 
+    artists.forEach(e=>artistsData.push(d3.json('data/'+ e + '/artist-' + e + '.json')))
+    return artistsData
+}
+
 function createAlbumNodesScale(nAlbums, albumNodesFoci, chartDim){
     let albumNodesScale = {}
 
@@ -128,7 +175,8 @@ function createAlbumNodesScale(nAlbums, albumNodesFoci, chartDim){
 
 function breakLineAlbumName(albumName){
 
-    const index = albumName.indexOf(' ', albumName.indexOf( ' ', albumName.indexOf( ' ' ) + 1 ) + 1);
+    //const index = albumName.indexOf(' ', albumName.indexOf( ' ', albumName.indexOf( ' ' ) + 1 ) + 1);
+    const index = albumName.indexOf( ' ', albumName.indexOf( ' ' ) + 1 )
     const firstChunk = index >= 0 ? albumName.substr( 0, index ) : albumName.substr( index + 1 );
     if ( index >= 0 ){
         const secondChunk = albumName.substr( index + 1 );
@@ -143,7 +191,6 @@ function breakLineAlbumName(albumName){
 
 function breakLineTrackName(trackName){
 
-    
     const firstChunk = trackName.substr(0,5)
     const secondChunk = trackName.substr(5,5)
     let outputHtml = ''

@@ -1,3 +1,6 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 #content{
     /*
     width: 1250;
@@ -6,7 +9,6 @@
     margin: auto;
     width: 100vw;
     height: 100vh;
-    
 }
 
 #chart{
@@ -18,7 +20,6 @@
     height: 100vh;
     background-color: #f7f7f7;
     margin: 0px 10px;
-    font-family: Arial, Helvetica, sans-serif;
     float: left;
 }
 
@@ -34,13 +35,20 @@
 
 #button-selector{
     height: 400px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    display: flex;
 }
 
 #selected-metric-button{
+    background-color: #1C618C;
+    color: white;
+    margin: 10px auto 10px;
+    display:block;
+}
+
+#select-artist-button{
     background-color: #1C618C;
     color: white;
     margin: 10px auto 10px;
@@ -101,10 +109,7 @@ em{
 .album-node-cover{
     opacity: 0;
     pointer-events: none;
-}
-
-.album-node-cover:hover{
-    opacity: 1
+    filter: contrast(20%);
 }
 
 /* Track Nodes */
@@ -121,13 +126,71 @@ em{
     text-align: center;
     text-anchor: middle;
     pointer-events: none;
-    color: '#403F3E';
+    color: '#252526';
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
     max-width: 2px;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .artist-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .artist-image {
+    line-height: 0;
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+
+  .artist-image:hover {
+    filter: blur(2px);
+  }
+
+  .artist-name {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(90,0,10,0.4);
+
+     
+    /* typographic styles */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+     
+    /* position the text centrally*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .artist-name:hover {
+    opacity: 1;
+  }
+
 
 @media only screen and (max-height: 600px) {
     #button-selector{

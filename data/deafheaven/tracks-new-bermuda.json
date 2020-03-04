@@ -1,0 +1,52 @@
+[
+    {
+        "id": "0ZA9Zg4umQEzdB3Fv8qr4E",
+        "name": "Brought to the Water",
+        "duration_ms": 517430,
+        "popularity": 35,
+        "track_number": 1,
+        "album": "New Bermuda",
+        "album_release_date": "2015-10-02",
+        "album_id": "2e4xOasRFhJn4x2MBM5pdu"
+    },
+    {
+        "id": "05xdNxzC7gXOx9UlRHvH1v",
+        "name": "Luna",
+        "duration_ms": 614048,
+        "popularity": 33,
+        "track_number": 2,
+        "album": "New Bermuda",
+        "album_release_date": "2015-10-02",
+        "album_id": "2e4xOasRFhJn4x2MBM5pdu"
+    },
+    {
+        "id": "5mFZdkeQqQiXDceXuqxlwE",
+        "name": "Baby Blue",
+        "duration_ms": 606496,
+        "popularity": 32,
+        "track_number": 3,
+        "album": "New Bermuda",
+        "album_release_date": "2015-10-02",
+        "album_id": "2e4xOasRFhJn4x2MBM5pdu"
+    },
+    {
+        "id": "5IlMoKCS8xZYRa67336c5g",
+        "name": "Come Back",
+        "duration_ms": 556945,
+        "popularity": 30,
+        "track_number": 4,
+        "album": "New Bermuda",
+        "album_release_date": "2015-10-02",
+        "album_id": "2e4xOasRFhJn4x2MBM5pdu"
+    },
+    {
+        "id": "6wbMtIVAux339lmOWlKZIx",
+        "name": "Gifts for the Earth",
+        "duration_ms": 502566,
+        "popularity": 30,
+        "track_number": 5,
+        "album": "New Bermuda",
+        "album_release_date": "2015-10-02",
+        "album_id": "2e4xOasRFhJn4x2MBM5pdu"
+    }
+]

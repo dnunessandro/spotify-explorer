@@ -9,7 +9,8 @@ const metricsList = [
     'liveness',
     'valence',
     'tempo',
-    'duration_ms']
+    'duration_ms',
+    'popularity']
 
 const displayMetricsList = [
     'danceability', 
@@ -21,7 +22,8 @@ const displayMetricsList = [
     'liveness',
     'valence',
     'tempo',
-    'duration']
+    'duration',
+    'popularity']
 
 const metricsDomains = {
     'danceability' : [0.2, 0.9],
@@ -33,11 +35,12 @@ const metricsDomains = {
     'liveness' : [0.1, 0.9],
     'valence' : [0.1, 0.9],
     'tempo' : [40, 200],
-    'duration_ms': [30000, 600000]
+    'duration_ms': [30000, 600000],
+    'popularity' : [20, 80]
 }
 
 const albumNodesXFoci = {
-    0: [0.5],
+    1: [0.5],
     2: [0.33, 0.66],
     3: [0.25, 0.5, 0.75],
     4: [0.33, 0.66, 0.33, 0.66],
@@ -76,13 +79,14 @@ const metricsExplanations = {
     'liveness' : 'Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live.',
     'valence' : 'Valence describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).',
     'tempo' : 'The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.',
-    'duration' : 'Duration of the track.'
+    'duration' : 'Duration of the track.',
+    'popularity' : 'Popularity of the track.'
 }
 
-const sortAlbumsByReleaseDateFlag = false
+const sortAlbumsByReleaseDateFlag = true
 
 const albumMetricsRange = [120, 230]
-const trackMetricsRange = [17, 35]
+const trackMetricsRange = [17, 40]
 const metricsScaleFactor = 6;
 const trackLabelMaxCharLen = 6;
 
@@ -105,6 +109,9 @@ const svg = d3.select('#chart')
 
 // Create Side Panel Buttons 
 createMetricsButtons(displayMetricsList)
+
+// Create Artists Buttons
+
 
 // Time Parse
 const parseTime = d3.timeParse("%s")

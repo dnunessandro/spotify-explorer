@@ -13,16 +13,20 @@
     <title>Spotify-Explorer</title>
 </head>
 <body>
+    <div id="splash" class='grid-container'></div>
     <div id="content">
         <div id="chart"></div>
         <div id="side-panel">
+            <button id="select-artist-button" class="metric-button" type="button">Change Artist</button>
             <button id="selected-metric-button" class="metric-button" type="button">Select Metric</button>
             <div id="button-selector"></div>
             <div id="tooltip"></div>
         </div>
         <div id="footer"></div>
     </div>
+    
 </body>
+<script src="js/data.js"></script>
 <script src="js/process-data.js"></script>
 <script src="js/force.js"></script>
 <script src="js/callback-functions.js"></script>

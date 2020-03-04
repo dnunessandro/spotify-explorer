@@ -1,40 +1,24 @@
-function dragAlbum(d) {
-    d.x = d3.event.x 
-    d.y = d3.event.y
-    /*
-    d3.select(this).attr("transform", function(d) {
-        return "translate(" + d.x + "," + d.y + ")";
-      })*/
-}
 
-function dragstarted(d, forceAlbums) {
-    if (!d3.event.active) forceAlbums.alphaTarget(0.3).restart();
+function dragstarted(d, force) {
+    if (!d3.event.active) force.alphaTarget(0.3).restart();
     d.fx = d.x;
     d.fy = d.y;
   }
   
-  function dragged(d, forceAlbums) {
+  function dragged(d) {
     d.fx = d3.event.x;
     d.fy = d3.event.y;
     $('.album-node')
         .css('pointer-events', 'none')
   }
   
-  function dragended(d, forceAlbums) {
-    if (!d3.event.active) forceAlbums.alphaTarget(0);
+  function dragended(d, force) {
+    if (!d3.event.active) force.alphaTarget(0);
     d.fx = null;
     d.fy = null;
     $('.album-node')
         .css('pointer-events', 'auto')
   }
-
-function dragTrack(d){
-    d.x = d3.event.x 
-    d.y = d3.event.y
-    d3.select(this).attr("transform", function(d) {
-        return "translate(" + d.x + "," + d.y + ")";
-      })
-}
 
 function createAlbumNodesFoci(albumNodesFociX, albumNodesFociY){
     let albumNodesFoci = []
@@ -60,7 +44,7 @@ function createTrackNodesForce(tracks){
         
     const forceTracks = d3.forceSimulation(tracks)
         .alphaDecay(0)
-        .force('collision', d3.forceCollide(30))
+        .force('collision', d3.forceCollide(35))
 
     return forceTracks
 

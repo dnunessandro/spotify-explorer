@@ -35,13 +35,17 @@ function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScal
 
 }
 
-function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceTracks, albumNodesFoci, albumNodeIndexScale, tooltip){
+function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceTracks, albumNodesFoci, albumNodeIndexScale, tooltip, trackMetricsScales, displayMetricsList){
     
     for(let i=0; i < albumIds.length; i++){
 
         let albumId = albumIds[i]
 
         d3.select('.album-node.album-'+albumId).on('click',function(){
+
+            const selectedMetric = $('#selected-metric-button').text().toLowerCase()
+            const selectedMetricIndex = metricsList.indexOf(selectedMetric)
+            
 
             let albumTracks = tracks.filter(d=>d.album_id == albumId)
             albumTracks.forEach(d=>d.x=albumNodesFoci[albumNodeIndexScale(d.album_id)].x)
@@ -58,11 +62,19 @@ function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceT
                 .append('g')
                 .classed('track-node', true)
                 .classed('album-' + albumId, true)
-        
+
             const trackNodeShapes = trackNodes.append('circle')
                 .attr('class', 'track-node-shape')
                 /*.attr('cx', albumNodesFoci[albumNodeIndexScale(albumId)].x)*/
-                .attr('r', trackNodesR)
+                .attr('r', function(d){
+                    if (selectedMetricIndex != -1){
+                        return trackMetricsScales[displayMetricsList[selectedMetricIndex]](d[selectedMetric])
+                    } else{
+                        return trackNodesR
+                    }
+                    
+
+                })
                 .style('fill', d=>nodeColorScale(d.album_id))
         
             const trackNodeLabels = trackNodes.append('text')
@@ -74,11 +86,13 @@ function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceT
             forceTracks.on("tick", function(){
                 trackNodesTickUpdate(tracks, trackNodesAll, albumNodesFoci, albumNodeIndexScale)
             });
-            trackNodes.call(d3.drag().on("drag", dragTrack));
-
-            trackNodes.on('click', function(){
-                createTrackNodesClickAnimation(trackNodes, trackNodeShapes, trackNodeLabels, albumId)
-            })
+            trackNodes.call(d3.drag()
+                .on("start", d=>dragstarted(d,forceTracks))
+                .on("drag", d=>dragged(d))
+                .on("end",  d=>dragended(d,forceTracks)));
+                trackNodes.on('click', function(){
+                    createTrackNodesClickAnimation(trackNodes, trackNodeShapes, trackNodeLabels, albumId)
+                })
 
             // Animate Track Nodes Tooltip
             trackNodes

@@ -1,0 +1,122 @@
+[
+    {
+        "id": "0aCRmuAglOL2ckmyXfG7Oh",
+        "name": "Intro",
+        "duration_ms": 140733,
+        "popularity": 37,
+        "track_number": 1,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "582kzCKNbdxuni6rbEhWEe",
+        "name": "The Battle",
+        "duration_ms": 252200,
+        "popularity": 36,
+        "track_number": 2,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "50sjgMSxqKrijenm8JkUXS",
+        "name": "I Don't Need It",
+        "duration_ms": 346973,
+        "popularity": 33,
+        "track_number": 3,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "5vJdTlWFP8R9NKVq1AW2hl",
+        "name": "Square People",
+        "duration_ms": 288280,
+        "popularity": 35,
+        "track_number": 4,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "2vvVDbi7Age5g8RLFvw5M0",
+        "name": "Madness",
+        "duration_ms": 129213,
+        "popularity": 33,
+        "track_number": 5,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "6sZS9jvmezLV1ipO8aEeKz",
+        "name": "Ways To Go",
+        "duration_ms": 207293,
+        "popularity": 29,
+        "track_number": 6,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "3Kqal9UQe2cgDKpox4uAiG",
+        "name": "You’re Mine",
+        "duration_ms": 308120,
+        "popularity": 31,
+        "track_number": 7,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "4XbqWnxrOwbPSMn5t4vJXL",
+        "name": "Days",
+        "duration_ms": 227346,
+        "popularity": 34,
+        "track_number": 8,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "7CcLV9CdY6T4RskN073pej",
+        "name": "Just In Case",
+        "duration_ms": 278666,
+        "popularity": 28,
+        "track_number": 9,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "7IpkDB030RY9eWMZwxGUqD",
+        "name": "You Made It (Part I)",
+        "duration_ms": 204640,
+        "popularity": 30,
+        "track_number": 10,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "0b3uA2mQX1ZRAMUE4n78aO",
+        "name": "You Made It (Part II)",
+        "duration_ms": 374066,
+        "popularity": 32,
+        "track_number": 11,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    },
+    {
+        "id": "18fyRYQot0c2KQGSBL7fgN",
+        "name": "Years To Build",
+        "duration_ms": 316373,
+        "popularity": 35,
+        "track_number": 12,
+        "album": "Weval",
+        "album_release_date": "2016-06-10",
+        "album_id": "51zkn8CSA5Tx2wKaGpl9ci"
+    }
+]
