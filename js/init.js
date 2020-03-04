@@ -72,7 +72,7 @@ const albumNodesYFoci = {
 const metricsExplanations = {
     'danceability' : 'Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.',
     'energy' : 'Energy describes the perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale.',
-    'loudness' : 'The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude).',
+    'loudness' : 'The overall loudness of a track in decibels (dB). Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude).',
     'speechiness' : 'Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the higher the attribute value.',
     'acousticness': 'Acousticness corresponds to a confidence measure on whether a track is acoustic.',
     'instrumentalness' : 'Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly “vocal”.',
@@ -92,9 +92,12 @@ const trackLabelMaxCharLen = 6;
 
 const albumNodesWidth = 180
 const albumNodesHeight = 180
-const albumNodesRX = 15
+const albumNodesRX = 30
 const trackNodesR = 25
 const trackNodesTransitionR = 70
+
+const selectedMetricColor = '#65d36e'
+const backgroundColor = '#f7f7f7'
 
 // Get Elements
 const chart = $('#chart')

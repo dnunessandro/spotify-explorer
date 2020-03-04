@@ -3,6 +3,7 @@ const detachedContent = $('#content').detach()
 const artists = Object.keys(artistsDiscography).sort()
 const splash = $('#splash')
 
+
 Promise.all(readArtistsData(artists)).then(function (artistsData) {
 
     artists.forEach(function (artist, i) {

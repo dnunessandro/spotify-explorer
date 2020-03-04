@@ -5,8 +5,14 @@ function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScal
         let metricStr = 'avg' + metric.charAt(0).toUpperCase() + metric   .slice(1)
         d3.select('#' + displayMetric + '-button').on('click', function(){
 
-            $('#button-selector').children().css('border-color', '#BFBFBF')
-            $(this).css('border-color', '#1C618C')
+            $('#button-selector').children()
+                .css('background-color', backgroundColor)
+                .css('border-color', selectedMetricColor)
+                .css('color', selectedMetricColor)
+            $(this)
+                .css('border-color', selectedMetricColor)
+                .css('background-color', selectedMetricColor)
+                .css('color', 'white')
 
             $('#selected-metric-button').text(displayMetric.charAt(0).toUpperCase() + displayMetric.slice(1))
 
@@ -201,6 +207,6 @@ function showMetricTooltip(i){
 
     const metric = $('#button-selector').children().eq(i).text()
     
-    tooltip.html(d=>'<strong>' + metric + '</strong><br><br>' + metricsExplanations[metric.toLowerCase()])
+    tooltip.html(d=>'<span><strong> ' + metric + ' </strong></span><br><br>' + metricsExplanations[metric.toLowerCase()])
 
 }
