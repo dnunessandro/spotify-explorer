@@ -9,8 +9,11 @@ const artistsDiscography = {
         'michigan',
         'seven-swans',
         'illinois',
+        'the-avalanche',
         'age-of-adz',
+        'all-delighted-people-ep',
         'carrie-and-lowell',
+        'the-greatest-gift',
         'planetarium'
     ], 
     'deafheaven': [
@@ -31,5 +34,12 @@ const artistsDiscography = {
     ],
     'omie-wise': [
         'to-know-thyself'
+    ],
+    'anitta': [
+        'anitta',
+        'ritmo-perfeito',
+        'meu-lugar',
+        'bang',
+        'kisses'
     ]
 }

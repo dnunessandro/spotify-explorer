@@ -92,6 +92,11 @@ em{
 
 
 /* Album Nodes */
+.album-node-shape{
+    stroke-width: 1px;
+    stroke: #727273
+}
+
 .album-node-shape:hover{
     stroke-width: 2px;
     stroke: #595857;
@@ -114,7 +119,8 @@ em{
 
 /* Track Nodes */
 .track-node-shape{
-    stroke: #595857;
+    stroke-width: 1px;
+    stroke: #727273;
 }
 .track-node-shape:hover{
     stroke-width: 1px;
