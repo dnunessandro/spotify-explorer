@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1tsavzKiKefTwE6z2vzaMz",
+        "name": "Dá Jeitinho",
+        "duration_ms": 205986,
+        "popularity": 16,
+        "track_number": 1,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "2LROcistOgIGjB3aiXzLmo",
+        "name": "Mentol",
+        "duration_ms": 270440,
+        "popularity": 14,
+        "track_number": 2,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "7xHUA9psFEYTpCa1iLzKN8",
+        "name": "Alargar o Passo",
+        "duration_ms": 152653,
+        "popularity": 18,
+        "track_number": 3,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "3Jvljth14HVHkRvx3zDG2x",
+        "name": "Deixem Lá",
+        "duration_ms": 203053,
+        "popularity": 28,
+        "track_number": 4,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "4r1FQgI7WsEmwRYW6KvWy9",
+        "name": "Só Beijinhos",
+        "duration_ms": 173840,
+        "popularity": 24,
+        "track_number": 5,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "3zDwAQYZLIC1yLaS8uRrIC",
+        "name": "Dono da Bola",
+        "duration_ms": 194386,
+        "popularity": 13,
+        "track_number": 6,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "0YW8eN8LcrT0bqdgdE7teG",
+        "name": "É Tu",
+        "duration_ms": 198053,
+        "popularity": 12,
+        "track_number": 7,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "4HgOIolf4k5lhA34ZWAxhm",
+        "name": "Em Paz",
+        "duration_ms": 301960,
+        "popularity": 14,
+        "track_number": 8,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "3PxtCC5LqdIA3mynBAE9W1",
+        "name": "Onda",
+        "duration_ms": 177320,
+        "popularity": 11,
+        "track_number": 9,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    },
+    {
+        "id": "4leIgjvX9hApEN4ZwUmbpG",
+        "name": "Indumentária",
+        "duration_ms": 235240,
+        "popularity": 11,
+        "track_number": 10,
+        "album": "Filipe Sambado & Os Acompanhantes de Luxo",
+        "album_release_date": "2018-04-20",
+        "album_id": "1U2p9IsowqdTskHfeZEWNQ"
+    }
+]

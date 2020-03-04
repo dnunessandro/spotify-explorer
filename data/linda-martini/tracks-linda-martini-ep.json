@@ -1,0 +1,42 @@
+[
+    {
+        "id": "6Uf6vLitMVlZx7ikjdkSmI",
+        "name": "Este Mar",
+        "duration_ms": 368360,
+        "popularity": 13,
+        "track_number": 1,
+        "album": "Linda Martini",
+        "album_release_date": "2006-01-01",
+        "album_id": "2lHPSpguTjz6V1HPaAtFwA"
+    },
+    {
+        "id": "4xjtQXjzgvKTntFOqui4BF",
+        "name": "Amor Combate",
+        "duration_ms": 301506,
+        "popularity": 10,
+        "track_number": 2,
+        "album": "Linda Martini",
+        "album_release_date": "2006-01-01",
+        "album_id": "2lHPSpguTjz6V1HPaAtFwA"
+    },
+    {
+        "id": "6IETZOLFjN9NCCkdi0urIC",
+        "name": "Efémera",
+        "duration_ms": 351866,
+        "popularity": 9,
+        "track_number": 3,
+        "album": "Linda Martini",
+        "album_release_date": "2006-01-01",
+        "album_id": "2lHPSpguTjz6V1HPaAtFwA"
+    },
+    {
+        "id": "5CrYZoBCdgv1E1wkkI3YhF",
+        "name": "Lição De Vôo Nº 1",
+        "duration_ms": 628840,
+        "popularity": 12,
+        "track_number": 4,
+        "album": "Linda Martini",
+        "album_release_date": "2006-01-01",
+        "album_id": "2lHPSpguTjz6V1HPaAtFwA"
+    }
+]

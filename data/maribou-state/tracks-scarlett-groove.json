@@ -1,0 +1,42 @@
+[
+    {
+        "id": "39Xn4vLXAnZJKhvlPCRi6N",
+        "name": "Scarlett Groove",
+        "duration_ms": 282721,
+        "popularity": 43,
+        "track_number": 1,
+        "album": "Scarlett Groove",
+        "album_release_date": "2012-11-12",
+        "album_id": "4G71wrYP61zydR2UpmyREN"
+    },
+    {
+        "id": "5SG3DoiyfzkAYh8AMeBkKx",
+        "name": "Pagoda",
+        "duration_ms": 343445,
+        "popularity": 31,
+        "track_number": 2,
+        "album": "Scarlett Groove",
+        "album_release_date": "2012-11-12",
+        "album_id": "4G71wrYP61zydR2UpmyREN"
+    },
+    {
+        "id": "3T2Nt2NlUqTcUY7hNlzMyE",
+        "name": "Summerfolds",
+        "duration_ms": 273968,
+        "popularity": 32,
+        "track_number": 3,
+        "album": "Scarlett Groove",
+        "album_release_date": "2012-11-12",
+        "album_id": "4G71wrYP61zydR2UpmyREN"
+    },
+    {
+        "id": "1f2c58d8dZ8cO5yfuwP2zX",
+        "name": "Puppet Strings",
+        "duration_ms": 349003,
+        "popularity": 33,
+        "track_number": 4,
+        "album": "Scarlett Groove",
+        "album_release_date": "2012-11-12",
+        "album_id": "4G71wrYP61zydR2UpmyREN"
+    }
+]

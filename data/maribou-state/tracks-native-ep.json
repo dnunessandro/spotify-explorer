@@ -1,0 +1,32 @@
+[
+    {
+        "id": "5rZfIY0mh5hhUj4yVZ7rkx",
+        "name": "All Blue",
+        "duration_ms": 228117,
+        "popularity": 30,
+        "track_number": 1,
+        "album": "Native EP",
+        "album_release_date": "2012-06-04",
+        "album_id": "7LNnL72T02vE9SvAxta21I"
+    },
+    {
+        "id": "2hgudjWd74hJe0JPb74fC8",
+        "name": "The Look",
+        "duration_ms": 255974,
+        "popularity": 34,
+        "track_number": 2,
+        "album": "Native EP",
+        "album_release_date": "2012-06-04",
+        "album_id": "7LNnL72T02vE9SvAxta21I"
+    },
+    {
+        "id": "1TJg0JvdvvCJ7HvzcZde8T",
+        "name": "Rush Don't Run",
+        "duration_ms": 313735,
+        "popularity": 13,
+        "track_number": 3,
+        "album": "Native EP",
+        "album_release_date": "2012-06-04",
+        "album_id": "7LNnL72T02vE9SvAxta21I"
+    }
+]

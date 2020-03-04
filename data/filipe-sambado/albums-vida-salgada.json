@@ -1,0 +1,21 @@
+[
+    {
+        "id": "2nWOAe4YoPicleM6lsFiTi",
+        "name": "Vida Salgada",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e023ee345f40d23db0bdb6b43f4",
+        "popularity": 24,
+        "release_date": "2016-03-25",
+        "total_tracks": 9,
+        "tracks": [
+            "Moda",
+            "Vida Salgada",
+            "Tou Confuso",
+            "Roda a Garrafa",
+            "Aprender e Ensinar",
+            "Nó do Peito",
+            "Telhados de Vidro",
+            "Subo a Montanha",
+            "Já Não Vou Sair Daqui"
+        ]
+    }
+]

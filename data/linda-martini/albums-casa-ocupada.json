@@ -1,0 +1,22 @@
+[
+    {
+        "id": "2VXdjUCXikupHdEzUuiNER",
+        "name": "Casa Ocupada",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e021ae6b93506dc301cbf9727d0",
+        "popularity": 32,
+        "release_date": "2010-01-01",
+        "total_tracks": 10,
+        "tracks": [
+            "Mulher-A-Dias",
+            "Nós Os Outros",
+            "Amigos Mortais",
+            "Elevador",
+            "S De Jéssica",
+            "Juventude Sónica",
+            "Ameaça Menor",
+            "Queluz Menos Luz",
+            "Belarmino Vs.",
+            "Cem Metros Sereia"
+        ]
+    }
+]

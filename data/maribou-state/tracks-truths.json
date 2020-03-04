@@ -1,0 +1,42 @@
+[
+    {
+        "id": "4jwB25eTwMNal8spkjEG8O",
+        "name": "Blue Sunday",
+        "duration_ms": 344346,
+        "popularity": 37,
+        "track_number": 1,
+        "album": "Truths",
+        "album_release_date": "2013-10-28",
+        "album_id": "0vNUjEFd2eAGqXoPmCy2Fw"
+    },
+    {
+        "id": "6JBNNY9C12lL8nYY4TIiVb",
+        "name": "Hollow Grove",
+        "duration_ms": 308604,
+        "popularity": 35,
+        "track_number": 2,
+        "album": "Truths",
+        "album_release_date": "2013-10-28",
+        "album_id": "0vNUjEFd2eAGqXoPmCy2Fw"
+    },
+    {
+        "id": "3hPQQLoF4w3tfe8ZliOs8v",
+        "name": "Moon Circles",
+        "duration_ms": 244093,
+        "popularity": 38,
+        "track_number": 3,
+        "album": "Truths",
+        "album_release_date": "2013-10-28",
+        "album_id": "0vNUjEFd2eAGqXoPmCy2Fw"
+    },
+    {
+        "id": "0UvCUnNaAlLh7Fz8hZc1uY",
+        "name": "Truths",
+        "duration_ms": 256973,
+        "popularity": 36,
+        "track_number": 4,
+        "album": "Truths",
+        "album_release_date": "2013-10-28",
+        "album_id": "0vNUjEFd2eAGqXoPmCy2Fw"
+    }
+]

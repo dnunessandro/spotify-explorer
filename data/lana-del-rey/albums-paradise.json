@@ -1,0 +1,20 @@
+[
+    {
+        "id": "3Sn5DDHo0l6lxSYVo8CqdK",
+        "name": "Paradise",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e0265a06ecc5200d9db3f256fc9",
+        "popularity": 55,
+        "release_date": "2012-11-09",
+        "total_tracks": 8,
+        "tracks": [
+            "Ride",
+            "American",
+            "Cola",
+            "Body Electric",
+            "Blue Velvet",
+            "Gods & Monsters",
+            "Yayo",
+            "Bel Air"
+        ]
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "4qOx96BEtOZldmrGYnFdGI",
+        "name": "How's That",
+        "duration_ms": 214141,
+        "popularity": 35,
+        "track_number": 1,
+        "album": "EP2",
+        "album_release_date": "2013-09-17",
+        "album_id": "5ycDOijAUr2HFYNEkVC2eX"
+    },
+    {
+        "id": "5JpNSjRIGjXmeiE45CBc6g",
+        "name": "Papi Pacify",
+        "duration_ms": 293910,
+        "popularity": 41,
+        "track_number": 2,
+        "album": "EP2",
+        "album_release_date": "2013-09-17",
+        "album_id": "5ycDOijAUr2HFYNEkVC2eX"
+    },
+    {
+        "id": "1rawzbVmF2XqJd3697tTdt",
+        "name": "Water Me",
+        "duration_ms": 204736,
+        "popularity": 40,
+        "track_number": 3,
+        "album": "EP2",
+        "album_release_date": "2013-09-17",
+        "album_id": "5ycDOijAUr2HFYNEkVC2eX"
+    },
+    {
+        "id": "6wPohGCdXTVLlZd57t7f0G",
+        "name": "Ultraviolet",
+        "duration_ms": 187115,
+        "popularity": 35,
+        "track_number": 4,
+        "album": "EP2",
+        "album_release_date": "2013-09-17",
+        "album_id": "5ycDOijAUr2HFYNEkVC2eX"
+    }
+]

@@ -1,0 +1,132 @@
+[
+    {
+        "id": "6adjXENHRzh4uyVziFlVGm",
+        "name": "Beginner's Luck",
+        "duration_ms": 268027,
+        "popularity": 60,
+        "track_number": 1,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "46SpOq8ojlVUBrgGnUzUlV",
+        "name": "Kingdom (feat. North Downs)",
+        "duration_ms": 250398,
+        "popularity": 53,
+        "track_number": 2,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "5m4o1robU6yTvFDXXSrH0F",
+        "name": "Turnmills",
+        "duration_ms": 304001,
+        "popularity": 52,
+        "track_number": 3,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "2oJ8Il24SIiDCJv39RYzPp",
+        "name": "Nervous Tics (feat. Holly Walker)",
+        "duration_ms": 254020,
+        "popularity": 60,
+        "track_number": 4,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "7isVqPzG3R5ni6IM4YG0sv",
+        "name": "Glasshouses",
+        "duration_ms": 225910,
+        "popularity": 57,
+        "track_number": 5,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "5O8jA5esx67O3FoqKwBjQV",
+        "name": "Part Time Glory",
+        "duration_ms": 256356,
+        "popularity": 44,
+        "track_number": 6,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "3PURbsY67tLMyausOABtit",
+        "name": "Feel Good (feat. Khruangbin)",
+        "duration_ms": 267200,
+        "popularity": 59,
+        "track_number": 7,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "570ETApQMCYLqOojX4ISiN",
+        "name": "Slow Heat (feat. Holly Walker)",
+        "duration_ms": 274406,
+        "popularity": 43,
+        "track_number": 8,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "58FsmlVRQxpjFmXF8vSKMT",
+        "name": "Vale",
+        "duration_ms": 247622,
+        "popularity": 52,
+        "track_number": 9,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "4ghGteg0whCnkUwaIbXdna",
+        "name": "Kāma",
+        "duration_ms": 282986,
+        "popularity": 41,
+        "track_number": 10,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "3HzSuE22PGsbPstPLv44M7",
+        "name": "Turnmills - Edit",
+        "duration_ms": 201181,
+        "popularity": 46,
+        "track_number": 1,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "3aItgN74XNH4h9rr8ng9jq",
+        "name": "Feel Good (feat. Khruangbin) - Edit",
+        "duration_ms": 217954,
+        "popularity": 42,
+        "track_number": 2,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    },
+    {
+        "id": "1Eo42r2Z18crKjRVcKOTiI",
+        "name": "Kingdom (feat. North Downs) - Edit",
+        "duration_ms": 214687,
+        "popularity": 39,
+        "track_number": 3,
+        "album": "Kingdoms In Colour",
+        "album_release_date": "2018-09-07",
+        "album_id": "70FGsJuLXPQHYdKmEZZFq9"
+    }
+]

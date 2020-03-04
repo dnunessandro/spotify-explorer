@@ -1,0 +1,102 @@
+[
+    {
+        "id": "2TUiggWlhYI6tX0hVtpZ5f",
+        "name": "Hangout at the Gallows",
+        "duration_ms": 295466,
+        "popularity": 42,
+        "track_number": 1,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "0C2vuwLuunPNCJpyAG3kzh",
+        "name": "Mr. Tillman",
+        "duration_ms": 183532,
+        "popularity": 45,
+        "track_number": 2,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "5bB3bddoqymxYGst28daVW",
+        "name": "Just Dumb Enough to Try",
+        "duration_ms": 242296,
+        "popularity": 36,
+        "track_number": 3,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "39mqn3zcgirQejl1rUzcKB",
+        "name": "Date Night",
+        "duration_ms": 150331,
+        "popularity": 34,
+        "track_number": 4,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "72lGJyqmLUJQEhUOzwCFQF",
+        "name": "Please Don't Die",
+        "duration_ms": 204253,
+        "popularity": 37,
+        "track_number": 5,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "3VVrToOB32gc8vtagtbBcg",
+        "name": "The Palace",
+        "duration_ms": 249346,
+        "popularity": 30,
+        "track_number": 6,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "1XMx2GqoBun1mDW0UQjbnZ",
+        "name": "Disappointing Diamonds Are the Rarest of Them All",
+        "duration_ms": 143004,
+        "popularity": 35,
+        "track_number": 7,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "4Wc9YdX4m5OrOn4X2St5Gq",
+        "name": "God's Favorite Customer",
+        "duration_ms": 321755,
+        "popularity": 33,
+        "track_number": 8,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "1rRsnlbUKxz3obkrAJplzI",
+        "name": "The Songwriter",
+        "duration_ms": 225840,
+        "popularity": 34,
+        "track_number": 9,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    },
+    {
+        "id": "51hhslV9yx9HYvi80nmsOT",
+        "name": "We're Only People (And There's Not Much Anyone Can Do About That)",
+        "duration_ms": 302098,
+        "popularity": 29,
+        "track_number": 10,
+        "album": "God's Favorite Customer",
+        "album_release_date": "2018-06-01",
+        "album_id": "1DSQ4XP8DRnfeiAYYagMUN"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "4in34qwyUghNc9ykmH2BTO",
+        "name": "LP1",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e02284fb1537a8eee7bbf9be82d",
+        "popularity": 58,
+        "release_date": "2014-08-11",
+        "total_tracks": 10,
+        "tracks": [
+            "Preface",
+            "Lights On",
+            "Two Weeks",
+            "Hours",
+            "Pendulum",
+            "Video Girl",
+            "Numbers",
+            "Closer",
+            "Give Up",
+            "Kicks"
+        ]
+    }
+]

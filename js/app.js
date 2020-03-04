@@ -131,8 +131,7 @@ Promise.all(readArtistsData(artists)).then(function (artistsData) {
 
             // Animate Metrics Selector
             $("#selected-metric-button").click(function () {
-                $("#button-selector").slideToggle('slow', function () {
-                });
+                $("#button-selector").slideToggle();
             });
 
             // Animate Metrics

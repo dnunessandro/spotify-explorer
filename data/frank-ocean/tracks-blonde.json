@@ -1,0 +1,172 @@
+[
+    {
+        "id": "19YKaevk2bce4odJkP5L22",
+        "name": "Nikes",
+        "duration_ms": 314075,
+        "popularity": 71,
+        "track_number": 1,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "2ZWlPOoWh0626oTaHrnl2a",
+        "name": "Ivy",
+        "duration_ms": 249191,
+        "popularity": 76,
+        "track_number": 2,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "3xKsf9qdS1CyvXSMEid6g8",
+        "name": "Pink + White",
+        "duration_ms": 184516,
+        "popularity": 76,
+        "track_number": 3,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "1IdZvb2XK8NmsovQlV6CPn",
+        "name": "Be Yourself",
+        "duration_ms": 86943,
+        "popularity": 59,
+        "track_number": 4,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "35xSkNIXi504fcEwz9USRB",
+        "name": "Solo",
+        "duration_ms": 257380,
+        "popularity": 68,
+        "track_number": 5,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "4xR3MAscflQ262kMeiKshQ",
+        "name": "Skyline To",
+        "duration_ms": 184600,
+        "popularity": 62,
+        "track_number": 6,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "5GUYJTQap5F3RDQiCOJhrS",
+        "name": "Self Control",
+        "duration_ms": 249667,
+        "popularity": 73,
+        "track_number": 7,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "2JUqYobT8NvARdPmc4ES2x",
+        "name": "Good Guy",
+        "duration_ms": 66786,
+        "popularity": 62,
+        "track_number": 8,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "7eqoqGkKwgOaWNNHx90uEZ",
+        "name": "Nights",
+        "duration_ms": 307151,
+        "popularity": 77,
+        "track_number": 9,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "2qtoRFCOEL1gRn5q9DJC7F",
+        "name": "Solo (Reprise)",
+        "duration_ms": 78742,
+        "popularity": 60,
+        "track_number": 10,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "17yrCsl1Ai6CZLBmGj6d6p",
+        "name": "Pretty Sweet",
+        "duration_ms": 158478,
+        "popularity": 59,
+        "track_number": 11,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "73D5hBkiVZkopZrmBZTBWf",
+        "name": "Facebook Story",
+        "duration_ms": 68588,
+        "popularity": 56,
+        "track_number": 12,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "1VZLEW5ZfcAbKZ94XQiSZF",
+        "name": "Close To You",
+        "duration_ms": 85754,
+        "popularity": 62,
+        "track_number": 13,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "2LMkwUfqC6S6s6qDVlEuzV",
+        "name": "White Ferrari",
+        "duration_ms": 248807,
+        "popularity": 70,
+        "track_number": 14,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "1BViPjTT585XAhkUUrkts0",
+        "name": "Seigfried",
+        "duration_ms": 334570,
+        "popularity": 65,
+        "track_number": 15,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "34xTFwjPQ1dC6uJmleno7x",
+        "name": "Godspeed",
+        "duration_ms": 177922,
+        "popularity": 65,
+        "track_number": 16,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    },
+    {
+        "id": "5k8LB57xOq8UUNVaKWSqrf",
+        "name": "Futura Free",
+        "duration_ms": 564165,
+        "popularity": 61,
+        "track_number": 17,
+        "album": "Blonde",
+        "album_release_date": "2016-08-20",
+        "album_id": "3mH6qwIy9crq0I9YQbOuDf"
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id": "75TKpJuNK2abswVZNFJ5Uz",
+        "name": "Fantasy",
+        "duration_ms": 311899,
+        "popularity": 53,
+        "track_number": 1,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "75WXKQGbaT0mi6GZItcVVJ",
+        "name": "If Loving You Is Wrong",
+        "duration_ms": 236411,
+        "popularity": 55,
+        "track_number": 2,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "6TzyEjhrZHE2jC2sENvZOg",
+        "name": "With an Addict",
+        "duration_ms": 424700,
+        "popularity": 49,
+        "track_number": 3,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "516mSAZ3wVsJHIIu2BAluA",
+        "name": "If You Can't Do It Good, Do It Hard",
+        "duration_ms": 237522,
+        "popularity": 49,
+        "track_number": 4,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "4igPel7JdcarDf3bzzofjc",
+        "name": "Alarm",
+        "duration_ms": 111977,
+        "popularity": 47,
+        "track_number": 5,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "0Uv6fWB9gT1DH7LpWN2lyf",
+        "name": "Deeeeeeefers",
+        "duration_ms": 349687,
+        "popularity": 48,
+        "track_number": 6,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "1IeLZZfSi5e4qGyMQUfu9S",
+        "name": "Faith",
+        "duration_ms": 419625,
+        "popularity": 47,
+        "track_number": 7,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "4Am1qB9GQg0lhABOWpKUuk",
+        "name": "Penny",
+        "duration_ms": 400875,
+        "popularity": 46,
+        "track_number": 8,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    },
+    {
+        "id": "7LhAh52m7hG9mJHVIwocmQ",
+        "name": "You (forever)",
+        "duration_ms": 235255,
+        "popularity": 44,
+        "track_number": 9,
+        "album": "2017 - 2019",
+        "album_release_date": "2020-02-07",
+        "album_id": "75vFTgDgdfVhbniLoyCNKh"
+    }
+]

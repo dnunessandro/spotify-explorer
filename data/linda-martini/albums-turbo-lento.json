@@ -1,0 +1,23 @@
+[
+    {
+        "id": "38dbak5uEHHVNVfsrrxtbi",
+        "name": "Turbo Lento",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e024fbe34f98f7c6b221f36867f",
+        "popularity": 30,
+        "release_date": "2013-01-01",
+        "total_tracks": 11,
+        "tracks": [
+            "Ninguém Tropeça Nos Dias",
+            "Juárez",
+            "Panteão",
+            "Pirâmica",
+            "Sapatos Bravos",
+            "Febril (Tanto Mar)",
+            "Tremor Essencial",
+            "Ratos",
+            "Aparato",
+            "Tamborina Fera",
+            "Volta"
+        ]
+    }
+]

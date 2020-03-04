@@ -1,0 +1,102 @@
+[
+    {
+        "id": "6dDDreE2qwhXCtCfp5b7lM",
+        "name": "Nótt",
+        "duration_ms": 312293,
+        "popularity": 20,
+        "track_number": 1,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "79xBEULSgkpcluWOssrIxd",
+        "name": "Ég Vildi Fegin Verða",
+        "duration_ms": 281906,
+        "popularity": 17,
+        "track_number": 2,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "3hDDGQY1Nq7mi8ZXCpJ6re",
+        "name": "Lífsins Ólgusjór",
+        "duration_ms": 312400,
+        "popularity": 17,
+        "track_number": 3,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "5R2wcOZIu7s9td4CjVEdW2",
+        "name": "Tíbrá",
+        "duration_ms": 240200,
+        "popularity": 32,
+        "track_number": 4,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "71RIjS3XPldgHUNhfrGGdZ",
+        "name": "Brennur Stjarna",
+        "duration_ms": 355373,
+        "popularity": 16,
+        "track_number": 5,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "2BVbDlWWRcaDA889fxkJg4",
+        "name": "Máninn Og Bróðir Hans",
+        "duration_ms": 286120,
+        "popularity": 11,
+        "track_number": 6,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "2DtiIPixIzTovEKCUsrJpz",
+        "name": "Þótt Hann Rigni",
+        "duration_ms": 304346,
+        "popularity": 12,
+        "track_number": 7,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "5CeWTLo33TrESdGmLTeeWW",
+        "name": "Hafið",
+        "duration_ms": 326000,
+        "popularity": 14,
+        "track_number": 8,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "23vZeioOt60fOVZX9vSOpN",
+        "name": "Hrafnar",
+        "duration_ms": 463053,
+        "popularity": 11,
+        "track_number": 9,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    },
+    {
+        "id": "55qkNaJbkGcDWxmL5i7b0f",
+        "name": "Vögguljóð",
+        "duration_ms": 337066,
+        "popularity": 10,
+        "track_number": 10,
+        "album": "Silkidrangar",
+        "album_release_date": "2014-05-05",
+        "album_id": "5ehcyGjOTrniOEzhtbOvd3"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": "63ynDniaAHRSPxeYof9YBT",
+        "name": "Linda Martini",
+        "cover_image": "https://i.scdn.co/image/ab67616d00001e02c69ba12989707468eb6ad4d6",
+        "popularity": 37,
+        "release_date": "2018-02-09",
+        "total_tracks": 10,
+        "tracks": [
+            "Gravidade",
+            "Caretano",
+            "Boca de Sal",
+            "É Só Uma Canção",
+            "Domingo Desportivo",
+            "Cor de Osso",
+            "Semi Tédio dos Prazeres",
+            "Quase Se Fez Uma Casa",
+            "Se Me Agiganto",
+            "Amares Volta (Faixa Extra)"
+        ]
+    }
+]

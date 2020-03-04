@@ -1,0 +1,42 @@
+[
+    {
+        "id": "6v3WbLesFR5K4Bx4NBqJyN",
+        "name": "Weak Spot",
+        "duration_ms": 223205,
+        "popularity": 39,
+        "track_number": 1,
+        "album": "EP1",
+        "album_release_date": "2012-12-04",
+        "album_id": "7KbIFEpOqDkCkq2mBUzJuD"
+    },
+    {
+        "id": "58t4UysofGey2TzRseCSmd",
+        "name": "Ache",
+        "duration_ms": 300000,
+        "popularity": 46,
+        "track_number": 2,
+        "album": "EP1",
+        "album_release_date": "2012-12-04",
+        "album_id": "7KbIFEpOqDkCkq2mBUzJuD"
+    },
+    {
+        "id": "2PV6oUcmFuUTk9D1WWwijy",
+        "name": "Breathe",
+        "duration_ms": 256666,
+        "popularity": 38,
+        "track_number": 3,
+        "album": "EP1",
+        "album_release_date": "2012-12-04",
+        "album_id": "7KbIFEpOqDkCkq2mBUzJuD"
+    },
+    {
+        "id": "7gqQzgDmSkq1tfhPNU0GZN",
+        "name": "Hide",
+        "duration_ms": 179372,
+        "popularity": 45,
+        "track_number": 4,
+        "album": "EP1",
+        "album_release_date": "2012-12-04",
+        "album_id": "7KbIFEpOqDkCkq2mBUzJuD"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "id": "5Y9IIH8Xmo1nuk0gfFjc4Q",
+        "name": "Figure 8",
+        "duration_ms": 183040,
+        "popularity": 44,
+        "track_number": 1,
+        "album": "M3LL155X",
+        "album_release_date": "2015-08-13",
+        "album_id": "7rSESybi14vAuEVzkipODD"
+    },
+    {
+        "id": "1NOP25DohSJVjVNEfDqBW0",
+        "name": "I'm Your Doll",
+        "duration_ms": 190826,
+        "popularity": 40,
+        "track_number": 2,
+        "album": "M3LL155X",
+        "album_release_date": "2015-08-13",
+        "album_id": "7rSESybi14vAuEVzkipODD"
+    },
+    {
+        "id": "4R33D1MJAnb07J1x3AQgDG",
+        "name": "In Time",
+        "duration_ms": 272246,
+        "popularity": 47,
+        "track_number": 3,
+        "album": "M3LL155X",
+        "album_release_date": "2015-08-13",
+        "album_id": "7rSESybi14vAuEVzkipODD"
+    },
+    {
+        "id": "65fjGurFHOjy34CffnGzlA",
+        "name": "Glass & Patron",
+        "duration_ms": 258920,
+        "popularity": 46,
+        "track_number": 4,
+        "album": "M3LL155X",
+        "album_release_date": "2015-08-13",
+        "album_id": "7rSESybi14vAuEVzkipODD"
+    },
+    {
+        "id": "23x0FMZTXNrEJ73rkA4yEW",
+        "name": "Mothercreep",
+        "duration_ms": 216413,
+        "popularity": 40,
+        "track_number": 5,
+        "album": "M3LL155X",
+        "album_release_date": "2015-08-13",
+        "album_id": "7rSESybi14vAuEVzkipODD"
+    }
+]
