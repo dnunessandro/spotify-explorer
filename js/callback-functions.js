@@ -1,3 +1,9 @@
+function createSelectMetricClickAnimation(){
+    $("#selected-metric-button").unbind('click').click(function () {
+        $("#button-selector").slideToggle();
+    });
+}
+
 function createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes, albumNodeCovers, albumNodeClipPaths){
     for(let i=0; i < displayMetricsList.length; i++){
         let metric = metricsList[i]
@@ -77,9 +83,7 @@ function createAlbumNodesClickAnimation(albumIds, tracks, nodeColorScale, forceT
                         return trackMetricsScales[displayMetricsList[selectedMetricIndex]](d[selectedMetric])
                     } else{
                         return trackNodesR
-                    }
-                    
-
+                    }    
                 })
                 .style('fill', d=>nodeColorScale(d.album_id))
         

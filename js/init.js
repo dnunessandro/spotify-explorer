@@ -39,34 +39,34 @@ const metricsDomains = {
     'popularity' : [20, 80]
 }
 
-const albumNodesXFoci = {
+let albumNodesXFoci = {
     1: [0.5],
     2: [0.33, 0.66],
-    3: [0.25, 0.5, 0.75],
+    3: [0.2, 0.5, 0.8],
     4: [0.33, 0.66, 0.33, 0.66],
-    5: [0.25, 0.5, 0.75, 0.33, 0.66],
-    6: [0.25, 0.5, 0.75, 0.25, 0.5, 0.75],
-    7: [0.25, 0.5, 0.75, 0.33, 0.66, 0.33, 0.66],
-    8: [0.25, 0.5, 0.75, 0.25, 0.5, 0.75, 0.33, 0.66],
-    9: [0.25, 0.5, 0.75, 0.25, 0.5, 0.75, 0.25, 0.5, 0.75],
-    10: [0.2, 0.4, 0.6, 0.8, 0.25, 0.5, 0.75, 0.25, 0.5, 0.75],
-    11: [0.2, 0.4, 0.6, 0.8, 0.2, 0.4, 0.6, 0.8, 0.25, 0.5, 0.75],
+    5: [0.2, 0.5, 0.8, 0.33, 0.66],
+    6: [0.2, 0.5, 0.8, 0.2, 0.5, 0.8],
+    7: [0.2, 0.5, 0.8, 0.33, 0.66, 0.33, 0.66],
+    8: [0.2, 0.5, 0.8, 0.2, 0.5, 0.8, 0.33, 0.66],
+    9: [0.2, 0.5, 0.8, 0.2, 0.5, 0.8, 0.2, 0.5, 0.8],
+    10: [0.2, 0.4, 0.6, 0.8, 0.3, 0.5, 0.7, 0.3, 0.5, 0.7],
+    11: [0.2, 0.4, 0.6, 0.8, 0.2, 0.4, 0.6, 0.8, 0.3, 0.5, 0.7],
     12: [0.2, 0.4, 0.6, 0.8, 0.2, 0.4, 0.6, 0.8, 0.2, 0.4, 0.6, 0.8]
 }
 
-const albumNodesYFoci = {
+let albumNodesYFoci = {
     1: [0.5],
     2: [0.5, 0.5],
     3: [0.5, 0.5, 0.5],
     4: [0.33, 0.33, 0.66, 0.66],
     5: [0.33, 0.33, 0.33, 0.66, 0.66],
     6: [0.33, 0.33, 0.33, 0.66, 0.66, 0.66],
-    7: [0.25, 0.25, 0.25, 0.5, 0.5, 0.75, 0.75],
-    8: [0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.75, 0.75],
-    9: [0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.75, 0.75, 0.75],
-    10: [0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.75, 0.75, 0.75],
-    11: [0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.75, 0.75, 0.75],
-    12: [0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.5, 0.5, 0.75, 0.75, 0.75, 0.75]
+    7: [0.2, 0.2, 0.2, 0.5, 0.5, 0.8, 0.8],
+    8: [0.2, 0.2, 0.2, 0.5, 0.5, 0.5, 0.8, 0.8],
+    9: [0.2, 0.2, 0.2, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8],
+    10: [0.2, 0.2, 0.2, 0.2, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8],
+    11: [0.2, 0.2, 0.2, 0.2, 0.5, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8],
+    12: [0.2, 0.2, 0.2, 0.25, 0.5, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 0.8]
 }
 
 const metricsExplanations = {
@@ -86,7 +86,7 @@ const metricsExplanations = {
 const sortAlbumsByReleaseDateFlag = true
 
 const albumMetricsRange = [120, 230]
-const trackMetricsRange = [17, 40]
+const trackMetricsRange = [22, 40]
 const metricsScaleFactor = 6;
 const trackLabelMaxCharLen = 6;
 
@@ -95,8 +95,10 @@ const albumNodesHeight = 180
 const albumNodesRX = 30
 const trackNodesR = 25
 const trackNodesTransitionR = 70
+const albumNodesXFociShift = 0
+const albumNodesYFociShift = 0
 
-const selectedMetricColor = '#65d36e'
+const selectedMetricColor = '#abd0ae'
 const backgroundColor = '#f7f7f7'
 
 // Get Elements
@@ -110,11 +112,12 @@ const svg = d3.select('#chart')
 .attr('width', chartWidth)
 .attr('height', chartHeight)
 
+// Add Shift to 
+albumNodesXFoci = shiftAlbumNodeFoci(albumNodesXFoci, albumNodesXFociShift)
+albumNodesYFoci = shiftAlbumNodeFoci(albumNodesYFoci, albumNodesYFociShift)
+
 // Create Side Panel Buttons 
 createMetricsButtons(displayMetricsList)
-
-// Create Artists Buttons
-
 
 // Time Parse
 const parseTime = d3.timeParse("%s")

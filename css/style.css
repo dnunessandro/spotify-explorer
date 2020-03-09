@@ -19,7 +19,6 @@
     width: 100vw;
     height: 100vh;
     background-color: #f7f7f7;
-    margin: 0px 10px;
     float: left;
 }
 
@@ -30,7 +29,7 @@
     margin-right: 10px;
     background-color: 'none';
     position: absolute;
-    right: 0vw;
+    left: 1vw;
 }
 
 #button-selector{
@@ -38,10 +37,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
 .selected-button{
-    background-color: #65d36e;
+    background-color: #92d398;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 12px;
@@ -59,8 +59,11 @@
 .selected-button:hover{
     border-width: 2px;
     border: solid;
-    border-color: #65d36e;
-    transition: border-color 0.2s ease-out; 
+    font-size: 13px;
+    border-color: #92d398;
+    transition: border-color 0.1s ease-out; 
+    transition: border-width 0.1s ease-out; 
+    transition: font-size 0.1s ease-out;
 }
 
 .metric-button{
@@ -68,22 +71,25 @@
     font-weight: 600;
     font-size: 12px;
     text-rendering: optimizeLegibility;
-    color: #65d36e;;
+    color: #92d398;
     margin: 10px 0 2px;
     display:block;
     width: 100%;
     border-radius: 16px;
     height: 40px;
     background-color: #f7f7f7;
-    border-color: #65d36e;
+    border-color: #92d398;
     border-width: 2px;
 }
 
 .metric-button:hover{
     border-width: 4px;
     border: solid;
-    border-color: #65d36e;
-    transition: border-color 0.2s ease-out;
+    border-color: #92d398;
+    font-size: 13px;
+    transition: border-color 0.1s ease-out;
+    transition: border-width 0.1s ease-out;
+    transition: font-size 0.1s ease-out;
 }
 
 button:focus {outline:0;}
@@ -98,16 +104,16 @@ button:focus {outline:0;}
     font-size: 14px;
     text-rendering: optimizeLegibility;
     font-family: Arial, Helvetica, sans-serif;
-    background: #65d36e;	
+    background: #92d398;	
     border: 0px;		
     border-radius: 8px;			
     pointer-events: none;
     bottom: 0px; 	
     opacity: 0;
-    margin: 2vh 2vw;
+    margin: 1vh 1vh;
     justify-content: space-between;
     align-items: center;
-    left: 0
+    right: 0
 }
 
 #tooltip span{
@@ -118,17 +124,17 @@ button:focus {outline:0;}
 
 em{
     background-color: #f7f7f7;
-    color: #65d36e;
+    color: #92d398;
 }
 
 /* Album Nodes */
 .album-node-shape{
     stroke-width: 2px;
-    stroke: white
+    stroke: #737373
 }
 
 .album-node-shape:hover{
-    stroke: white;
+    stroke: #D9D9D9;
     stroke-width: 2px;
 }
 
@@ -137,7 +143,7 @@ em{
     text-align: center;
     text-anchor: middle;
     pointer-events: none;
-    fill: #282828;
+    fill: #5b5b5b;
     font-weight: bold;
 }
 
@@ -150,11 +156,11 @@ em{
 /* Track Nodes */
 .track-node-shape{
     stroke-width: 1px;
-    stroke: #727273;
+    stroke: #737373;
 }
 .track-node-shape:hover{
     stroke-width: 1px;
-    stroke: #595857;
+    stroke: #D9D9D9;
 }
 
 .track-node-label{
@@ -162,7 +168,7 @@ em{
     text-align: center;
     text-anchor: middle;
     pointer-events: none;
-    fill: #282828;
+    fill: #5b5b5b;
     font-weight: bold;
     white-space: nowrap;
     text-rendering: optimizeLegibility;
@@ -205,7 +211,7 @@ em{
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(90,0,10,0.4);
+    background: rgba(101,210,110,0.4);
 
      
     /* typographic styles */

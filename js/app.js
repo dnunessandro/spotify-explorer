@@ -3,7 +3,6 @@ const detachedContent = $('#content').detach()
 const artists = Object.keys(artistsDiscography).sort()
 const splash = $('#splash')
 
-
 Promise.all(readArtistsData(artists)).then(function (artistsData) {
 
     artists.forEach(function (artist, i) {
@@ -48,7 +47,6 @@ Promise.all(readArtistsData(artists)).then(function (artistsData) {
 
         ).then(function (data) {
 
-
             // Get Albuns and Tracks
             const processedData = processData(data, sortAlbumsByReleaseDateFlag)
             const albums = processedData['albums']
@@ -61,7 +59,6 @@ Promise.all(readArtistsData(artists)).then(function (artistsData) {
 
             const albumMetricsScales = createMetricScales(metricsDomains, displayMetricsList, albumMetricsRange)
             const trackMetricsScales = createMetricScales(metricsDomains, displayMetricsList, trackMetricsRange)
-
 
             const nodeColorScale = d3.scaleOrdinal()
                 .domain(albums.map(e => e.id))
@@ -91,7 +88,6 @@ Promise.all(readArtistsData(artists)).then(function (artistsData) {
                 .classed('album-node', true)
                 .style('transform', (d,i)=>"translate(" + parseInt(d.x - $('.album-node-shape').eq(i).attr('width')/2) + "," 
                 + parseInt(d.y - $('.album-node-shape').eq(i).attr('height')/2) + ")")
-
 
             const albumNodeShapes = albumNodes.append('rect')
                 .attr('class', 'album-node-shape')
@@ -130,10 +126,8 @@ Promise.all(readArtistsData(artists)).then(function (artistsData) {
                 .on("drag", d => dragged(d, forceAlbums))
                 .on("end", d => dragended(d, forceAlbums)));
 
-            // Animate Metrics Selector
-            $("#selected-metric-button").click(function () {
-                $("#button-selector").slideToggle();
-            });
+            // Animate Select Metric Button
+            createSelectMetricClickAnimation()
 
             // Animate Metrics
             createMetricsButtonsClickAnimation(displayMetricsList, albumMetricsScales, trackMetricsScales, albumNodeShapes, albumNodeCovers, albumNodeClipPaths)
